@@ -1,0 +1,3710 @@
+<style>
+    #tbbill th {
+        border: solid 1px white;
+        padding: 2px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    #branch_name_ser td {
+        background-color: white;
+        min-width: 80px;
+        text-align: center;
+        padding: 2px 5px;
+    }
+
+    #branch_name_ser:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 10px 10px 10px;
+        border-color: #dd4397 transparent transparent transparent;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    #branch_name_ser table tr:first-child td:nth-child(1) {
+        border-top-right-radius: 10px;
+    }
+
+    #branch_name_ser table tr:first-child td:nth-child(2) {
+        border-top-left-radius: 10px;
+    }
+
+    #branch_name_ser table tr:last-child td:last-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    #branch_name_ser table tr:last-child td:first-child {
+        border-bottom-right-radius: 10px;
+    }
+
+    #branch_name_ser table {
+        margin: -5px;
+    }
+
+    #branch_name_ser {
+        z-index: 99999999;
+        top: 73px !important;
+        left: auto !important;
+    }
+
+    .servprice {
+        background-color: yellow;
+        border: solid 1px black;
+    }
+
+    #tbheadx td {
+        border: solid 1px white;
+        padding: 5px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .totexc {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .itemdiscountrate {
+        position: relative;
+        z-index: 99999999;
+    }
+
+    .fetnameh {
+        clear: both;
+        text-align: center;
+    }
+
+    #tbitems input {
+        border: solid 1px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .hidemob {
+            display: none;
+        }
+    }
+
+    #tbbill td {
+        border: solid 1px white;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .servadd {
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    #offer {
+        width: 100%;
+        padding: 7px;
+        font-size: 25px;
+        background-color: blue;
+        color: white;
+    }
+
+    .services td {
+        font-size: 15px;
+        background-color: yellow;
+        font-weight: bolder;
+    }
+
+    .services_invoice td {
+        font-weight: bolder;
+        background-color: #cfcdfc;
+    }
+
+    .enfoot td {
+        font-weight: bolder;
+        background-color: #cfcdfc;
+    }
+
+    .dtl_price {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card-header {
+        background-color: #cfcdfc;
+    }
+
+    .greentd {
+        background-color: lightgreen;
+    }
+
+    .yellowtd {
+        background-color: yellow;
+    }
+
+    .redtd {
+        background-color: darkorange;
+    }
+
+    #quantity {
+        text-align: center;
+    }
+
+    .lbgrid {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    #itemtb th {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #28a745d1;
+        border: solid 1px;
+        color: white;
+    }
+
+    #itemtb td {
+        text-align: center;
+        font-size: 16px;
+        border: solid 1px;
+    }
+
+    #model_result_end td {
+        background-color: #5dd8cd;
+    }
+
+    #material_result_end td {
+        background-color: #ffb480;
+    }
+
+    .datepicker {
+        z-index: 999 !important;
+    }
+
+    .select2-selection__rendered {
+        text-align: center;
+        font-size: 18px;
+        width: 135px;
+    }
+
+    .dataTables_filter {
+        width: 100%;
+    }
+
+    .dataTables_filter input {
+        border: solid #818181 2px;
+        border-radius: 15%;
+        text-align: center;
+    }
+
+    .logoi {
+        max-width: 200px;
+        max-height: 100px;
+        margin: 3px;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .TBD_table thead,
+    .TBD_table tbody,
+    .TBD_table tr,
+    .TBD_table td,
+    .TBD_table th {
+        display: block;
+    }
+
+    .TBD_table tr:after {
+        content: " ";
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+
+    .TBD_table thead th {
+        height: 30px;
+        /*text-align: left;*/
+    }
+
+    .TBD_table tbody {
+        height: 200px;
+        overflow-y: auto;
+    }
+
+    .TBD_table thead {
+        width: 900px;
+    }
+
+    .TBD_table thead th,
+    .TBD_table tfoot th {
+        width: 70px;
+        float: left;
+    }
+
+    .TBD_table tbody td {
+        width: 90px;
+        float: left;
+    }
+
+    .TBTC_table thead,
+    .TBTC_table tbody,
+    .TBTC_table tr,
+    .TBTC_table td,
+    .TBTC_table th {
+        display: block;
+    }
+
+    .TBTC_table tr:after {
+        content: " ";
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+
+    .TBTC_table thead th {
+        height: 30px;
+        /*text-align: left;*/
+    }
+
+    .TBTC_table tbody {
+        height: 200px;
+        overflow-y: auto;
+    }
+
+    .TBTC_table thead {
+        width: 1200px;
+    }
+
+    .TBTC_table thead th,
+    .TBTC_table tfoot th {
+        width: 55px;
+        float: left;
+    }
+
+    .TBTC_table tbody td {
+        width: 70px;
+        float: left;
+    }
+
+    #tittb td {
+        font-size: larger;
+    }
+
+    .address {
+        margin: 5%;
+    }
+
+    #tbhead th {
+        background-color: #f5cbcb;
+        border: solid 1px;
+        text-align: center;
+    }
+
+    #tbhead td {
+        border: solid 1px;
+        text-align: center;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .entryrow {
+        border-bottom: solid 1px #aaa;
+        font-size: 16px;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .entrylab {
+        background-color: #17a2b8;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        vertical-align: middle;
+        padding: 3px;
+        max-width: 300px;
+        border: 1px solid #0000006b;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .title-4 {
+        text-align: center;
+        color: #ccc;
+        border: 1px solid;
+        padding: 15px;
+        margin: 10px 10%;
+        border-radius: 30px;
+        background: white;
+    }
+
+    .card-header .back {
+        padding-top: 25px;
+        background: red;
+        margin: 0px;
+        background: #0082b2;
+        padding: 10px;
+    }
+
+    .getarea {
+        text-align: right;
+        padding-right: 3%;
+    }
+
+    .sernumSales_order {
+        max-width: 40%;
+        text-align: center;
+        height: 40px;
+    }
+
+    .sernumSales_order_button_after {
+        text-align: left;
+        float: left;
+        border: 1px solid;
+        background: white;
+    }
+
+    .sernumSales_order_button_after button {
+        font-size: 20px;
+        border-left: 1px solid black;
+    }
+
+    .first_Sales_order {
+        color: #dc3545;
+    }
+
+    .back_Sales_order {
+        color: #17a2b8;
+    }
+
+    .next_Sales_order {
+        color: #dc3545;
+    }
+
+    .last_Sales_order {
+        color: #17a2b8;
+    }
+
+    .card-header {
+        padding-top: 0px;
+        padding: 0px;
+    }
+
+    hr {
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+
+    .savearea {
+        text-align: center;
+    }
+
+    .savearea button {
+        font-size: 22px;
+        font-size: 22px;
+        border: 1px solid black;
+        background: white;
+        box-shadow: 0px 0px 1px 0px black;
+    }
+
+    .savearea .save {
+        color: #28a745;
+    }
+
+    .savearea .print {
+        color: #6c757d;
+    }
+
+    .savearea .delete {
+        color: #dc3545;
+    }
+
+    .savearea .ment {
+        color: #17a2b8;
+    }
+
+    .savearea .new {
+        color: #ffc107;
+    }
+
+    .entryrow {
+        padding: 20px 0px;
+    }
+
+    .entryrow .entrydiv input,
+    .table_bottom th input,
+    textarea {
+        padding: 5px;
+        border: 1px solid #aaa;
+        box-shadow: 0px 0px 1px #aaa;
+        border: 1px solid;
+    }
+
+    .entryrow label {
+        margin-bottom: 0px;
+    }
+
+    .entryrow .textdiv {
+        margin: auto 0px;
+    }
+
+    /* .entryrow .textareainput {
+    } */
+
+    .entryrow .textareainput textarea {
+        height: 100px;
+        border: 1px solid black;
+        box-shadow: 0px 0px 6px 2px #aaa;
+    }
+
+    .table_bottom {
+        width: 100%;
+    }
+
+    /* .table_bottom tr {
+        } */
+
+    /* .table_bottom td {
+        } */
+
+    #location {
+        padding: 7px;
+    }
+
+    .top_Services {
+        width: 90%;
+        margin: auto;
+        background: #efefef;
+        border: 1px solid;
+        border-radius: 10px;
+        margin: 20px auto 50px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 40px;
+        padding: 5px 0px;
+    }
+
+    .tdx {
+        border: 1px solid;
+        vertical-align: top;
+    }
+
+    .tbfetx td {
+        border-top: solid 1px;
+    }
+
+    .divspecif input {
+        width: 100px;
+        text-align: center;
+    }
+
+    .divspecif textarea {
+        width: 100%;
+        text-align: center;
+    }
+
+    .divspecif table {
+        width: 100%;
+    }
+
+    .divspecif {
+        padding: 5px;
+    }
+
+    .input-box {
+        margin-bottom: 1rem;
+        width: calc(100% / 2 - 20px);
+    }
+
+    .input-box .details {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    td input,
+    .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 0rem 1rem;
+        font-size: 1rem;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .input-box input:focus {
+        border-color: #12509c;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding: 0px 3%;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 880px) {
+        .form-container {
+            flex-wrap: nowrap;
+        }
+    }
+
+    @media (max-width: 880px) {
+        .input-box:last-child {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 584px) {
+        .form-container {
+            max-width: 100%;
+        }
+
+        .input-box {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        form {
+            overflow-y: scroll;
+        }
+    }
+
+    .billfilter {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 1px solid #eee;
+        padding: 0.5rem 0rem;
+        margin-bottom: 1rem;
+    }
+
+    .billfilter div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .spanColor {
+        color: cornflowerblue;
+    }
+
+    .billfilter span {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    /* clock css */
+    /* Google fonts import link */
+    @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
+
+    .clock {
+        font-family: "Orbitron", sans-serif;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .clock .clock-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        padding: 0 1rem;
+        max-width: 560px;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .clock .clock-container .time {
+        display: flex;
+        align-items: center;
+    }
+
+    .clock-container .time .time-colon {
+        display: flex;
+        align-items: center;
+    }
+
+    .time .time-colon .am_pm {
+        position: absolute;
+        bottom: -5px;
+        font-size: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .time .time-colon .time-text {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: #f0f8ff;
+        border-radius: 6px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .time .time-colon .time-text,
+    .time .time-colon .colon {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    .time .time-colon .colon {
+        font-size: 40px;
+        margin: 0 10px;
+    }
+
+    .time .time-colon .time-text .text {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+</style>
+
+<style>
+    .loadedx {
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        height: 1000px;
+        top: 0px;
+        left: 0px;
+        background: #220d0d;
+        opacity: 0.5;
+    }
+</style>
+
+<div class="page-content--bgf7">
+    <!-- BREADCRUMB-->
+    <!-- END BREADCRUMB-->
+    <!-- WELCOME-->
+    <section class="welcome p-t-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" dir="rtl">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="title-4">
+                                @info$$title$$Lables_translate$$welcome
+                                <small style="color: #8bc34a">@DBHelper.UserName("")</small>
+                                @info$$details$$Lables_translate$$welcome
+                                <strong style="color: #00bcd4">
+                                    @info$$title$$Lables_translate$$screen_name
+                                </strong>
+                                <br />
+                            </h2>
+                            <h3>
+                                @info$$title$$Lables_translate$$branch_name :
+                                (<span>@DBHelper.UserBranshName()</span>)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END WELCOME-->
+    <div class="main-content" style="padding-top: 10px" dir="rtl">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row back">
+                            <div class="getarea col-md-6 col-sm-6">
+                                <input autocomplete="off"
+                                       id="sernumSales_order"
+                                       type="number"
+                                       min="1"
+                                       placeholder="@info$$title$$Lables_translate$$inv_search"
+                                       class="sernumSales_order" />
+                                <div class="btn-group btn-corner sernumSales_order_button_after">
+                                    <button id="first_Sales_order" class="btn first_Sales_order">
+                                        |&lt;
+                                    </button>
+                                    <button id="back_Sales_order" class="btn back_Sales_order">
+                                        <i class="ace-icon fa fa-angle-double-right"></i>
+                                    </button>
+                                    <button id="next_Sales_order" class="btn next_Sales_order">
+                                        <i class="ace-icon fa fa-angle-double-left"></i>
+                                    </button>
+                                    <button id="last_Sales_order" class="btn last_Sales_order">
+                                        &gt;|
+                                    </button>
+                                </div>
+                                <div style="clear: both"></div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="savearea">
+                                    <button data-toggle="tooltip"
+                                            data-placement="left"
+                                            title="save"
+                                            id="save_sales_order"
+                                            class="btn save">
+                                        <i class="ace-icon fa fa-floppy-o blue"></i>
+                                    </button>
+                                    <button id="print_Sales_order"
+                                            data-toggle="tooltip"
+                                            data-placement="left"
+                                            title="print"
+                                            class="btn print">
+                                        <i class="ace-icon fa fa-print blue"></i>
+                                    </button>
+                                    <button style="display: none"
+                                            data-toggle="tooltip"
+                                            data-placement="left"
+                                            title="delete"
+                                            id="delete_sales_order"
+                                            class="btn delete">
+                                        <i class="ace-icon fa fa-trash blue"></i>
+                                    </button>
+                                    <button data-toggle="tooltip"
+                                            data-placement="left"
+                                            title="Maintenance"
+                                            id="ment_Sales_order"
+                                            class="btn ment">
+                                        <i class="ace-icon fa fa-cogs blue"></i>
+                                    </button>
+                                    <button data-toggle="tooltip"
+                                            data-placement="left"
+                                            title="New"
+                                            id="newinvSales_order"
+                                            class="btn">
+                                        <i class="ace-icon fa fa-refresh blue new"></i>
+                                    </button>
+                                    <button data-toggle="tooltip"
+                                            data-placement="left"
+                                            title="@info$$title$$Lables_translate$$confirm"
+                                            id="approve"
+                                            class="btn">
+                                        <i class="ace-icon fa fa-asterisk black appro"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- idk what is that -->
+                        <div class="row" style="justify-content: center">
+                            <table id="tbbill">
+                                <thead id="billhead"></thead>
+                                <tbody id="billadd"></tbody>
+                            </table>
+                        </div>
+                        <!-- ----- -->
+                        <div class="row" style="justify-content: center">
+                            <div class="billfilter">
+                                <div>
+                                    <span id="brname" class="spanColor"></span>
+                                    <select class="form-control form-control-sm"
+                                            style="display: none"
+                                            id="location">
+                                        <option value="24122c2f0ea8400ead89abb6d137e731">
+                                            @info$$title$$Lables_translate$$location
+                                        </option>
+                                        <option value="897267cc699c4ec6b67a036de50df3bd">
+                                            @info$$details$$Lables_translate$$location
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="spanColor">@info$$title$$Lables_translate$$cat</span>
+                                    <select class="form-control form-control-sm"
+                                            id="Sales_order_type_Category"></select>
+                                </div>
+                                <div>
+                                    <span class="spanColor">@info$$details$$Lables_translate$$cat</span>
+                                    <select class="form-control form-control-sm"
+                                            id="Sales_order_type"></select>
+                                </div>
+                                <div>
+                                    <span class="spanColor">@info$$title$$Lables_translate$$bill</span>
+                                    <input class="form-control"
+                                           id="invoice_number"
+                                           placeholder="@info$$title$$Lables_translate$$bill"
+                                           readonly
+                                           value="" />
+                                </div>
+
+                                <div>
+                                    <span class="spanColor">@info$$title$$Lables_translate$$deliv</span>
+                                    <input type="search" class="form-control" id="branch_name"
+                                           data-id="@DBHelper.UserBranshID(" ")" type="text"
+                                    style="text-align:center;width:80%;position: relative;"
+                                    value="@DBHelper.UserBranshName()" />
+                                </div>
+
+                                <div>
+                                    <span class="spanColor">@info$$title$$Lables_translate$$dissc</span>
+                                    <input id="allow_edit" type="checkbox" />
+                                </div>
+                            </div>
+                            <!-- start clock -->
+                            <div class="clock" dir="ltr">
+                                <div class="clock-container">
+                                    <div class="time">
+                                        <div class="time-colon">
+                                            <div class="time-text">
+                                                <span class="num hour_num">08</span>
+                                                <span class="text">Hours</span>
+                                            </div>
+                                            <span class="colon">:</span>
+                                        </div>
+                                        <div class="time-colon">
+                                            <div class="time-text">
+                                                <span class="num min_num">45</span>
+                                                <span class="text">Minutes</span>
+                                            </div>
+                                            <span class="colon">:</span>
+                                        </div>
+                                        <div class="time-colon">
+                                            <div class="time-text">
+                                                <span class="num sec_num">06</span>
+                                                <span class="text">Seconds</span>
+                                            </div>
+                                            <span class="am_pm">AM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                // creating a function and calling it in every seconds
+                                setInterval(() => {
+                                    let date = new Date(),
+                                    hour = date.getHours(),
+                                        min = date.getMinutes(),
+                                        sec = date.getSeconds();
+
+                                let d;
+                                d = hour < 12 ? "AM" : "PM"; //if hour is smaller than 12, than its value will be AM else its value will be pm
+                                hour = hour > 12 ? hour - 12 : hour; //if hour value is greater than 12 than 12 will subtracted ( by doing this we will get value till 12 not 13,14 or 24 )
+                                hour = hour == 0 ? (hour = 12) : hour; // if hour value is  0 than it value will be 12
+
+                                // adding 0 to the front of all the value if they will less than 10
+                                hour = hour < 10 ? "0" + hour : hour;
+                                min = min < 10 ? "0" + min : min;
+                                sec = sec < 10 ? "0" + sec : sec;
+
+                                document.querySelector(".hour_num").innerText = hour;
+                                document.querySelector(".min_num").innerText = min;
+                                document.querySelector(".sec_num").innerText = sec;
+                                document.querySelector(".am_pm").innerText = d;
+                                }, 1000); // 1000 milliseconds = 1s
+                            </script>
+                            <!-- End clock -->
+                            <div style="overflow-x: auto; width: 100%; padding: 1rem">
+                                <table class="table table-condensed">
+                                    <thead>
+                                    <tr>
+                                        <td>
+                                            <button id="bt_customer"
+                                                    class="btn btn-primary"
+                                                    style="padding: 5px 36px; margin: 0rem 1rem">
+                                                @info$$title$$Lables_translate$$pick
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <input id="customer_phone_ser"
+                                                   placeholder="@info$$title$$Lables_translate$$phone_search"
+                                                   type="number"
+                                                   style="margin: 0rem 1rem" />
+                                        </td>
+                                        <td>
+                                            <input id="customer_name_ser"
+                                                   placeholder="@info$$title$$Lables_translate$$name_search"
+                                                   style="margin: 0rem 1rem" />
+                                        </td>
+                                        <td>
+                                            <div style="
+                              display: flex;
+                              flex-wrap: wrap;
+                              justify-content: center;
+                              align-items: center;
+                            ">
+                                                <a id="addnewcustbt" href="#" class="btn btn-danger">@info$$title$$Lables_translate$$save</a>
+                                                <a id="addnewcustbtadvansed"
+                                                   href="#"
+                                                   class="btn btn-danger"
+                                                   style="margin: 0rem 1rem">
+                                                    @info$$title$$Lables_translate$$coding
+                                                </a>
+                                                <button class="btn btn-primary" id="showstk">
+                                                    @info$$title$$Lables_translate$$inquiry
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="customer_result"></tbody>
+                                    <tfoot id="customer_result_end"></tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div>
+                            <div class="form-container">
+                                <div class="input-box" style="display: none">
+                                    <input type="hidden" id="customer_id" />
+                                    <input type="hidden" id="hid" />
+                                    <input type="hidden" id="genid" />
+                                </div>
+
+                                <div class="input-box">
+                                    <!-- <div class="col-md-2 entrylab"><span class="entrylab">اسم العميل</span></div> -->
+                                    <span class="details entrylab">@info$$title$$Lables_translate$$cust_name</span>
+                                    <input readonly
+                                           placeholder="@info$$title$$Lables_translate$$cust_name"
+                                           min="1"
+                                           type="text"
+                                           id="Customer_name" />
+                                </div>
+
+                                <div class="input-box">
+                                    <span class="details entrylab">@info$$title$$Lables_translate$$phone_num</span>
+                                    <input readonly
+                                           placeholder="@info$$title$$Lables_translate$$phone_num"
+                                           min="1"
+                                           type="number"
+                                           id="phone" />
+                                </div>
+
+                                <!-- <div class="input-box">
+                                      <span class="details entrylab">@info$$title$$Lables_translate$$related_num</span>
+                                      <input placeholder="@info$$title$$Lables_translate$$related_num" id="related_doc" />
+                                    </div> -->
+                                <div class="input-box">
+                                    <span class="details entrylab">
+                                        @info$$title$$Lables_translate$$date<i style="padding: 0px 5px; line-height: 15px"
+                                                                               class="fa fa-calendar bigger-110"></i>
+                                    </span>
+                                    <input class="date-picker"
+                                           data-date-format="dd-mm-yyyy"
+                                           style="text-align: center"
+                                           type="text"
+                                           id="date1" />
+                                </div>
+                                <div class="input-box">
+                                    <span class="details entrylab">
+                                        @info$$title$$Lables_translate$$delivery<i style="padding: 0px 5px; line-height: 15px"
+                                                                                   class="fa fa-calendar bigger-110"></i>
+                                    </span>
+
+                                    <input class="date-picker"
+                                           data-date-format="dd-mm-yyyy"
+                                           style="text-align: center"
+                                           type="text"
+                                           id="date2" />
+                                </div>
+
+                                <div class="input-box">
+                                    <span class="details entrylab">@info$$title$$Lables_translate$$customer_address</span>
+                                    <input id="Customer_address"
+                                           readonly
+                                           placeholder="@info$$title$$Lables_translate$$customer_address" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="col-md-12">
+                                    <div id="result_customer"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row py-4"
+                             style="width: 94%; margin: 10px auto; justify-content: center">
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <table class="table table-striped table-condensed">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <button id="bt_model" class="btn btn-info">
+                                                @info$$title$$Lables_translate$$pick
+                                            </button>
+                                        </th>
+                                        <th class="input-box" style="width: auto">
+                                            <input class="entryo"
+                                                   id="model_code"
+                                                   placeholder="@info$$title$$Lables_translate$$model" />
+                                        </th>
+                                        <th class="input-box" style="width: auto">
+                                            <input id="model_name"
+                                                   class="entryo"
+                                                   placeholder="@info$$details$$Lables_translate$$model" />
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="model_result" style="width: 100%"></tbody>
+                                    <tfoot id="model_result_end"></tfoot>
+                                </table>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <table class="table table-striped table-condensed">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <button id="bt_material" class="btn btn-danger">
+                                                @info$$title$$Lables_translate$$pick
+                                            </button>
+                                        </th>
+                                        <th class="input-box" style="width: auto">
+                                            <input class="entryo"
+                                                   id="material_code"
+                                                   placeholder="@info$$title$$Lables_translate$$cloth" />
+                                        </th>
+                                        <th class="input-box" style="width: auto">
+                                            <input id="material_name"
+                                                   class="entryo"
+                                                   placeholder="@info$$details$$Lables_translate$$cloth" />
+                                        </th>
+                                        <th style="vertical-align: middle">
+                                            @info$$title$$Lables_translate$$balance
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="material_result"></tbody>
+                                    <tfoot id="material_result_end"></tfoot>
+                                </table>
+                            </div>
+                            <div class="d-flex mt-4"
+                                 style="
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                  ">
+                                <input type="number"
+                                       style="max-width: 75px; border: solid 1px"
+                                       value="1"
+                                       id="quantity"
+                                       class="entryo" />
+                                <div class="p-3">
+                                    <textarea placeholder="@info$$title$$Lables_translate$$notes"
+                                              style="width: 100%; height: 65px"
+                                              id="notes"
+                                              class="entryo"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center mt-4">
+                                <button id="btadditem" class="btn btn-primary">
+                                    @info$$title$$Lables_translate$$new_line
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12"
+                                 style="text-align: center; margin: 10px 0px">
+                                <button data-toggle="tooltip"
+                                        data-placement="left"
+                                        title="delete"
+                                        id="delete_row"
+                                        class="btn btn-danger">
+                                    <i class="ace-icon fa fa-trash blue"></i>
+                                </button>
+                                <button style="display: none"
+                                        data-toggle="tooltip"
+                                        data-placement="left"
+                                        title="delete"
+                                        id="add_subrow"
+                                        class="btn btn-primary">
+                                    <i class="ace-icon fa fa-plus blue"></i>
+                                </button>
+                                <button data-toggle="tooltip"
+                                        data-placement="left"
+                                        title="delete"
+                                        id="control_items"
+                                        style="background-color: gray; color: white"
+                                        class="btn btn-gray">
+                                    <i class="ace-icon fa fa-cogs blue"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex mx-0"
+                         style="justify-content: center; align-items: center; width: 100%">
+                        <div class="col-md-12"
+                             dir="rtl"
+                             style="overflow-x: auto; width: 100%">
+                            <table id="itemtb" class="table table-striped table-condensed">
+                                <thead>
+                                <tr>
+                                    <th style="max-width: 40px">-</th>
+                                    <th style="max-width: 50px">
+                                        @info$$title$$Lables_translate$$code
+                                    </th>
+                                    <th style="min-width: 200px">
+                                        @info$$title$$Lables_translate$$product_name
+                                    </th>
+                                    <!-- <th class="hidemob" style="max-width: 100px">ملاحظات</th> -->
+                                    <th style="max-width: 100px">
+                                        @info$$title$$Lables_translate$$notes
+                                    </th>
+                                    <th style="max-width: 50px">
+                                        @info$$title$$Lables_translate$$count
+                                    </th>
+                                    <th style="max-width: 50px">
+                                        @info$$title$$Lables_translate$$price
+                                    </th>
+                                    <th style="max-width: 50px">
+                                        @info$$title$$Lables_translate$$discount
+                                    </th>
+                                    <th style="width: 100px">
+                                        @info$$title$$Lables_translate$$discount_perc
+                                    </th>
+
+                                    <th style="max-width: 50px">
+                                        @info$$title$$Lables_translate$$total
+                                    </th>
+                                    <!-- <th class="hidemob" style="max-width: 50px">اسم العرض</th> -->
+                                    <th style="max-width: 50px">
+                                        @info$$title$$Lables_translate$$view_name
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody id="tbitems"></tbody>
+
+                                <tfoot>
+                                <tr class="enfoot">
+                                    <td colspan="7" style="text-align: center">
+                                        @info$$title$$Lables_translate$$total_auth
+                                    </td>
+                                    <td id="totx" colspan="3">0.00</td>
+                                </tr>
+                                <tr class="enfoot">
+                                    <td colspan="7" style="text-align: center">
+                                        @info$$title$$Lables_translate$$discount
+                                    </td>
+                                    <td id="discx" colspan="3">0.00</td>
+                                </tr>
+                                <tr class="enfoot">
+                                    <td colspan="7" style="text-align: center">
+                                        @info$$title$$Lables_translate$$total
+                                    </td>
+                                    <td id="netx" colspan="3">0.00</td>
+                                </tr>
+                                <tr class="enfoot">
+                                    <td colspan="7" style="text-align: center">
+                                        @info$$title$$Lables_translate$$taxes
+                                    </td>
+                                    <td id="taxx" colspan="3">0.00</td>
+                                </tr>
+                                <tr class="enfoot">
+                                    <td colspan="7" style="text-align: center">
+                                        @info$$title$$Lables_translate$$net_tax
+                                    </td>
+                                    <td id="totxend" colspan="3">0.00</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="top_Services" id="offers">
+                        <div class="card-body">
+                            <div class="row">
+                                <h3 style="width: 100%; vertical-align: middle">
+                                    <a class="btn btn-info"
+                                       target="_blank"
+                                       href="../../ERP/tablet5?tbname=sales_offer_type"
+                                       style="padding: 3px 13px; vertical-align: bottom">+</a>
+                                    @info$$title$$Lables_translate$$offers
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <select id="offer"></select>
+                                <script>
+                                    $("#offer").append(
+                                            "<option>@info$$title$$Lables_translate$$offer_pick</option>"
+                                    );
+
+                                    getjdata({ name: "sales_offer_type" }, function (data) {
+                                        $.each(data, function (i, item) {
+                                            $("#offer").append(
+                                                    "<option>" + item.Offer_name + "</option>"
+                                            );
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        $("#offers").hide();
+                    </script>
+
+                    <div class="top_Services">
+                        <div class="card-body">
+                            <div class="row">
+                                <h3 style="width: 100%; vertical-align: middle">
+                                    <button id="btservshow" class="btn btn-danger" data-show="0">
+                                        @info$$title$$Lables_translate$$show_services
+                                    </button>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="row" id="servdiv">
+                            <div class="col-md-12">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>@info$$title$$Lables_translate$$service_name</th>
+                                        <th>@info$$title$$Lables_translate$$details</th>
+                                        <th>@info$$title$$Lables_translate$$price</th>
+                                        <th>@info$$title$$Lables_translate$$notes</th>
+                                        <th>@info$$title$$Lables_translate$$adds</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="serv"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $("#servdiv").hide();
+
+                        var isloadserv = 0;
+                        $("#btservshow").click(function () {
+                            if (isloadserv == 0) {
+                                isloadserv = 1;
+
+                                getservx();
+                            }
+
+                            if ($(this).data("show") == "0") {
+                                $(this).data("show", "1");
+                                $(this).html("@info$$title$$Lables_translate$$hide_services");
+                                $("#servdiv").show();
+                            } else {
+                                $(this).data("show", "0");
+                                $(this).html("@info$$title$$Lables_translate$$show_services");
+                                $("#servdiv").hide();
+                            }
+                        });
+                        function getservx() {
+                            getjdata(
+                                    { name: "Services_types", cond: "", orderby: " sort " },
+                                    function (data) {
+                                        ////console.log(data);
+                                        $("#serv").html("");
+                                        $.each(data, function (i, item) {
+                                            //edit
+                                            $("#serv").append(
+                                                    " <tr><td> <span>" +
+                                                    item.Service_Type_name +
+                                                    "</span></td> <td> <select class='servid' id='" +
+                                                    item.ID +
+                                                    "'> </select> </td><td> <input  id='price_" +
+                                                    item.ID +
+                                                    "' style='width:75px;text-align:center;' type='number' class='servprice' value='" +
+                                                    item.price +
+                                                    "'   ></td><td><textarea placeholder='@info$$title$$Lables_translate$$notes' style='width:100%'></textarea></td><td><button  data-id='" +
+                                                    item.ID +
+                                                    "' class='btn btn-primary servadd' style='padding: 10px 30px;border-radius: 5px;vertical-align: text-bottom;'>@info$$title$$Lables_translate$$add</button></td></tr>"
+                                            );
+                                            var idserv = item.ID;
+                                            getjdata(
+                                                    {
+                                                        name: "Services_Codes",
+                                                        top: "1000000",
+                                                        cond: " Service_type_ID ='" + idserv + "'",
+                                                        orderby: " sort ",
+                                                    },
+                                                    function (data) {
+                                                        //////console.log(data);
+                                                        $("#" + idserv).html("");
+                                                        $.each(data, function (i, itemx) {
+                                                            $("#" + idserv).append(
+                                                                    "<option id='" +
+                                                                    itemx.ID +
+                                                                    "' value='" +
+                                                                    itemx.ID +
+                                                                    "' data-price='" +
+                                                                    itemx.price +
+                                                                    "' data-priceid='price_" +
+                                                                    idserv +
+                                                                    "'>" +
+                                                                    itemx.name +
+                                                                    "</option>"
+                                                            );
+                                                        });
+
+                                                        $("#search_code").on("select2-selecting", function (e) {
+                                                            $("#search_code").select2("data", e.choice);
+                                                        });
+                                                        $("#" + idserv).select2();
+
+                                                        $("#" + idserv).on("change", function () {
+                                                            var idval = $("#" + idserv).val();
+                                                            console.log(idval);
+                                                            var idpr = $("#" + idval).data("priceid");
+                                                            var pr = $("#" + idval).data("price");
+                                                            console.log(pr);
+                                                            $("#" + idpr).val(pr);
+                                                        });
+                                                    }
+                                            );
+                                        });
+
+                                        $(".servadd").click(function () {
+                                            if ($("#hid").val() == "") {
+                                                swal("يجب حفظ اذن أمر البيع أولا قبل عمل الإضافات");
+                                            } else {
+                                                var servidty = $(this).data("id");
+                                                var servid = $("#" + servidty).val();
+                                                var parentx = $(this).parent().parent();
+                                                var notes = parentx.find("textarea").first().val();
+                                                var price = parentx.find("input").first().val();
+                                                ////console.log(priceDBHelperBHelper;
+
+                                                var chkitemid = $("#tbitems")
+                                                        .find("input:checked")
+                                                        .first()
+                                                        .data("id");
+                                                if (chkitemid == null) {
+                                                    swal("يجب اختيار منتج أولا قبل إضافة خدمة ");
+                                                } else {
+                                                    var jsobj = "";
+                                                    var valn = "";
+                                                    var type = "";
+                                                    type = "nvarchar";
+                                                    valn = uuidv4();
+                                                    jsobj +=
+                                                            '{ "name":"ID", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"},';
+
+                                                    type = "nvarchar";
+                                                    valn = $("#hid").val();
+                                                    jsobj +=
+                                                            '{ "name":"Header_id", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"},';
+                                                    type = "nvarchar";
+                                                    valn = servid;
+                                                    jsobj +=
+                                                            '{ "name":"name_servies", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"},';
+                                                    type = "decimal";
+                                                    valn = "1";
+                                                    jsobj +=
+                                                            '{ "name":"Quantity", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"},';
+                                                    type = "decimal";
+                                                    valn = price;
+                                                    jsobj +=
+                                                            '{ "name":"Price", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"},';
+                                                    type = "decimal";
+                                                    valn = "0";
+                                                    jsobj +=
+                                                            '{ "name":"Discount", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"},';
+                                                    type = "nvarchar";
+                                                    valn = chkitemid;
+                                                    jsobj +=
+                                                            '{ "name":"Sales_details", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"},';
+                                                    type = "nvarchar";
+                                                    valn = notes;
+                                                    jsobj +=
+                                                            '{ "name":"notes", "value":"' +
+                                                            replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                            '", "type":"' +
+                                                            type +
+                                                            '"}';
+                                                    jsobj = jsonEscape(jsobj);
+                                                    jsobj = '{"data":[' + jsobj + "]}";
+                                                    type = "nvarchar";
+                                                    var obj = JSON.parse(jsobj);
+                                                    ////console.log(obj);
+                                                    var stf = JSON.stringify(obj.data);
+                                                    loading("add_items_Services");
+                                                    $.post(
+                                                            "../../ERP/save",
+                                                            {
+                                                                id: servid,
+                                                                tb: "Sales_order_Services",
+                                                                obj: stf,
+                                                                cols: "*",
+                                                            },
+                                                            function (data, suc) {
+                                                                //console.log(data);
+
+                                                                var res = Number(data.res);
+                                                                if (res > 0) {
+                                                                    getjdata(
+                                                                            {
+                                                                                name: "sales_order_items_function",
+                                                                                top: "10000000",
+                                                                                cols: "*",
+                                                                                tbtype: "view",
+                                                                                orderby: "",
+                                                                                cond: "",
+                                                                                parm: "('" + $("#hid").val() + "')",
+                                                                                help: "0",
+                                                                            },
+                                                                            function (datax) {
+                                                                                adddtl(datax);
+                                                                            }
+                                                                    );
+                                                                } else {
+                                                                    swal("من فضلك راجع بيانات الإدخال");
+                                                                }
+
+                                                                unloading("add_items_Services");
+                                                            }
+                                                    );
+                                                }
+                                            }
+                                        });
+                                    }
+                            );
+
+                            getjdata(
+                                    {
+                                        name: "invoice_services",
+                                        cond: " isnull(active,1) =1",
+                                        orderby: " sort ",
+                                    },
+                                    function (data) {
+                                        ////console.log(data);
+                                        // $("#serv").html('');
+                                        $.each(data, function (i, item) {
+                                            $("#serv").append(
+                                                    " <tr><td> <span>" +
+                                                    item.name_service +
+                                                    "</span></td> <td> <select style='width:100%' class='servid' id='" +
+                                                    item.ID +
+                                                    "'><option value='" +
+                                                    item.ID +
+                                                    "'>" +
+                                                    item.name_service +
+                                                    "</option></select> </td><td> <input style='width:75px;text-align:center;' type='number' class='servprice' value='" +
+                                                    item.default_value +
+                                                    "' readonly  ></td><td><textarea placeholder='@info$$title$$Lables_translate$$notes' style='width:100%'></textarea></td><td><button id='bt_" +
+                                                    item.ID +
+                                                    "' data-id='" +
+                                                    item.ID +
+                                                    "' class='btn btn-primary' style='padding: 10px 30px;border-radius: 5px;vertical-align: text-bottom;' > @info$$title$$Lables_translate$$add </button></td></tr>"
+                                            );
+
+                                            $("#bt_" + item.ID).click(function () {
+                                                if ($("#hid").val() == "") {
+                                                    swal("يجب حفظ اذن أمر البيع أولا قبل عمل الإضافات");
+                                                } else {
+                                                    var servid = $(this).data("id");
+                                                    var parentx = $(this).parent().parent();
+                                                    var notes = parentx.find("textarea").first().val();
+                                                    var price = parentx.find("input").first().val();
+                                                    if (Number(price) >= 0) {
+                                                        var jsobj = "";
+                                                        var valn = "";
+                                                        var type = "";
+                                                        type = "nvarchar";
+                                                        valn = uuidv4();
+                                                        jsobj +=
+                                                                '{ "name":"ID", "value":"' +
+                                                                replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                                '", "type":"' +
+                                                                type +
+                                                                '"},';
+
+                                                        type = "nvarchar";
+                                                        valn = $("#hid").val();
+                                                        jsobj +=
+                                                                '{ "name":"Header_id", "value":"' +
+                                                                replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                                '", "type":"' +
+                                                                type +
+                                                                '"},';
+                                                        type = "nvarchar";
+                                                        valn = servid;
+                                                        jsobj +=
+                                                                '{ "name":"name_service", "value":"' +
+                                                                replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                                '", "type":"' +
+                                                                type +
+                                                                '"},';
+                                                        type = "decimal";
+                                                        valn = price;
+                                                        jsobj +=
+                                                                '{ "name":"service_Value", "value":"' +
+                                                                replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                                '", "type":"' +
+                                                                type +
+                                                                '"},';
+                                                        type = "decimal";
+                                                        valn = "0";
+                                                        jsobj +=
+                                                                '{ "name":"Discount", "value":"' +
+                                                                replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                                '", "type":"' +
+                                                                type +
+                                                                '"},';
+                                                        type = "nvarchar";
+                                                        valn = notes;
+                                                        jsobj +=
+                                                                '{ "name":"notes", "value":"' +
+                                                                replaceAll(replaceAll(valn, "'", ""), '"', "") +
+                                                                '", "type":"' +
+                                                                type +
+                                                                '"}';
+                                                        jsobj = jsonEscape(jsobj);
+                                                        jsobj = '{"data":[' + jsobj + "]}";
+                                                        type = "nvarchar";
+                                                        var obj = JSON.parse(jsobj);
+                                                        ////console.log(obj);
+                                                        var stf = JSON.stringify(obj.data);
+                                                        loading("add_items_services_details");
+                                                        $.post(
+                                                                "../../ERP/save",
+                                                                {
+                                                                    id: servid,
+                                                                    tb: "sales_order_services_details",
+                                                                    obj: stf,
+                                                                    cols: "*",
+                                                                },
+                                                                function (data, suc) {
+                                                                    ////console.log(data);
+
+                                                                    var res = Number(data.res);
+                                                                    if (res > 0) {
+                                                                        getjdata(
+                                                                                {
+                                                                                    name: "sales_order_items_function",
+                                                                                    top: "10000000",
+                                                                                    cols: "*",
+                                                                                    tbtype: "view",
+                                                                                    orderby: "",
+                                                                                    cond: "",
+                                                                                    parm: "('" + $("#hid").val() + "')",
+                                                                                    help: "0",
+                                                                                },
+                                                                                function (datax) {
+                                                                                    adddtl(datax);
+                                                                                }
+                                                                        );
+                                                                    } else {
+                                                                        swal("من فضلك راجع بيانات الإدخال");
+                                                                    }
+
+                                                                    unloading("add_items_services_details");
+                                                                }
+                                                        );
+                                                    } else {
+                                                        swal("يجب اختيار منتج أولا قبل إضافة خدمة ");
+                                                    }
+                                                }
+                                            });
+                                        });
+                                    }
+                            );
+                        }
+                    </script>
+                </div>
+                <div class="top_Services">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3 style="width: 100%; vertical-align: middle">
+                                <button id="spabtn"
+                                        style="padding: 5px"
+                                        class="btn btn-primary"
+                                        data-show="0">
+                                    @info$$title$$Lables_translate$$show_spec
+                                </button>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row" id="servdiv">
+                        <div class="row fetdiv">
+                            <select id="fetlistse"></select>
+                        </div>
+                        <br />
+                        <div class="col-md-12">
+                            <div class="row fetdiv">
+                                <div class="row">
+                                    <div id="divfet"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top_Services" style="display: none">
+                <div class="card-body">
+                    <div class="row">
+                        <h3 style="width: 100%; vertical-align: middle">
+                            <button onclick="getlinkserv()" class="btn btn-info">
+                                @info$$title$$Lables_translate$$sales_edit
+                            </button>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row" id="upoderrow">
+                    <div class="col-md-12">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>@info$$title$$Lables_translate$$edit_name</th>
+                                <th>@info$$title$$Lables_translate$$product_barcode</th>
+                                <th>@info$$title$$Lables_translate$$price</th>
+                                <th>@info$$title$$Lables_translate$$notes</th>
+                                <th>@info$$title$$Lables_translate$$control</th>
+                            </tr>
+                            </thead>
+                            <tbody id="">
+                            <tr>
+                                <td>
+                                    <select id="upment"></select>
+                                </td>
+                                <td>
+                                    <input style="
+                          width: 100px;
+                          text-align: center;
+                          border: solid 1px;
+                        "
+                                           id="Sales_order_items_search"
+                                           data-id="" />
+                                </td>
+                                <td>
+                                    <input style="width: 75px; text-align: center; border: solid 1px"
+                                           id="upprice"
+                                           value="0"
+                                           min="0"
+                                           type="number" />
+                                </td>
+                                <td>
+                                        <textarea style="
+                          width: 100px;
+                          text-align: center;
+                          border: solid 1px;
+                        "
+                                                  placeholder="@info$$title$$Lables_translate$$notes"></textarea>
+                                </td>
+                                <td>
+                                    <button id="addupment" class="btn btn-danger">
+                                        @info$$title$$Lables_translate$$add
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <script>
+                    $("#upoderrow").hide();
+                    function getlinkserv() {
+                        $("#upoderrow").show();
+                        $("#upment").append(
+                                "<option value='0' >@info$$title$$Lables_translate$$choose_modification</option>"
+                        );
+
+                        getjdata(
+                                { name: "Sales_order_maintenance_types" },
+                                function (data) {
+                                    $.each(data, function (i, item) {
+                                        $("#upment").append(
+                                                "<option value='" +
+                                                item.ID +
+                                                "' data-price='" +
+                                                item.price +
+                                                "' >" +
+                                                item.name_type +
+                                                "</option>"
+                                        );
+                                    });
+                                }
+                        );
+                        $("#upment").on("change", function () {
+                            var prices = $(this)
+                                    .find("option:selected")
+                                    .first()
+                                    .data("price");
+                            ////console.log(prices);
+                            if (Number(prices) >= 0) {
+                                $("#upprice").val(prices);
+                            }
+                        });
+                        searchj({
+                            inputid: "Sales_order_items_search",
+                            name: "Sales_order_items_search",
+                            cols: "ID,code,invoice_date",
+                            isunique: 0,
+                            filed: "code",
+                            help: "0",
+                            search_ty: "equal",
+                        });
+
+                        $("#addupment").click(function () {
+                            if ($("#hid").val() == "") {
+                                swal("يجب اختيار امر بيع أولا");
+                            } else {
+                                if ($("#upment").val() == "0") {
+                                    swal("يجب اختيار نوع التعديل");
+                                } else {
+                                    var sr = $("#Sales_order_items_search").data("id");
+
+                                    if (sr == null) {
+                                        sr = "";
+                                    }
+                                    loading("add_itemscc");
+                                    $.post(
+                                            "../../ERP/addupment",
+                                            {
+                                                hid: $("#hid").val(),
+                                                sales_order_items: sr,
+                                                mentid: $("#upment").val(),
+                                                price: $("#upprice").val(),
+                                            },
+                                            function (data) {
+                                                if (data[0].ID == null) {
+                                                    swal("راجع بيانات الإدخال");
+                                                    ////console.log(data);
+                                                } else {
+                                                    adddtl(data);
+                                                }
+                                                unloading("add_itemscc");
+                                            }
+                                    );
+                                }
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END DATA TABLE-->
+<!-- COPYRIGHT-->
+<!-- END COPYRIGHT-->
+<!-- rest --------------  -->
+
+<div id="skmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title">
+                    @info$$title$$Lables_translate$$materials_balance
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <table id="tbraw" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <td>@info$$title$$Lables_translate$$ids</td>
+                            <td>@info$$title$$Lables_translate$$name</td>
+                            <td>@info$$title$$Lables_translate$$code</td>
+                            <td>@info$$title$$Lables_translate$$balance</td>
+                        </tr>
+                        </thead>
+                        <tbody id="tbstk"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td>@info$$title$$Lables_translate$$input_date</td>
+            <td><label id="begin_date"></label></td>
+        </tr>
+    </table>
+</div>
+
+<!-- Modal -->
+<div id="custmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-dialog modal-lg" style="width: 1500px">
+            <div class="modal-content" style="width: 1200px; margin-left: -200px">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        @info$$title$$Lables_translate$$customers_coding
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="frmcust" style="width: 100%; height: 600px" src=""></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        @info$$title$$Lables_translate$$close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    console.log(getCookie("UserLang"))
+    function loading(id) {
+        var loadhtml = '<div id="' + id + '" class="loadedx" ><div   class="text-center"><h2 style="color:#fff;margin-top:100px;" >Loading  ... </h2></div></div>';
+
+        $("body").first().append(loadhtml);
+    }
+    function unloading(id) {
+
+        $("#" + id).remove();
+
+    }
+
+    if ('@DBHelper.IsInGroup("sales manager")' == 'true' || '@DBHelper.IsAdmin()' == 'true') {
+        $("#allow_edit").show();
+    } else {
+        $("#allow_edit").hide();
+    }
+
+
+    $("#allow_edit").change(function () {
+        if ('@DBHelper.IsInGroup("sales manager")' == 'true' || '@DBHelper.IsAdmin()' == 'true') {
+            var ised = "0";
+            if (this.checked) {
+
+                ised = "1";
+            }
+            if ($("#hid").val() == '') {
+                swal('تنبيه', 'من فضلك قم باختيار الإذن أولا  !')
+
+            }
+            else {
+                var procx = " sales_order_alllow_edit N'" + $("#hid").val() + "'," + ised + ",N'@DBHelper.UserID("")'";
+                loading("sales_order_alllow_edit");
+                $.post("../../ERP/proced", { id: procx }, function (data, suc) {
+                    unloading("sales_order_alllow_edit");
+                    if (Number(data) > 0) {
+
+                        if (ised == "1") {
+                            swal('تنبيه', 'يمكنك الأن تعديل الخصم  !');
+
+                        } else {
+
+                            swal('تنبيه', 'تم غلق التعديل على الخصم  !');
+
+                        }
+
+                    } else {
+
+                        swal('تنبيه', 'لم يتم حفظ الإذن راجع صلاحية مستخدمك مع مدير النظام  !');
+
+                    }
+                });
+            }
+
+        }
+
+
+    });
+    $("#addnewcustbt").click(function () {
+        try {
+            if ($("#customer_name_ser").val().length < 2 || $("#customer_phone_ser").val().length < 10) {
+                swal(" من فضلك أكمل البيانات الناقصة ");
+
+            } else {
+
+                var procx = " customers_prime_add_fast N'" + $("#customer_name_ser").val() + "',N'" + $("#customer_phone_ser").val() + "',N'@DBHelper.UserID("")',N'@DBHelper.UserBranshID("")','@DBHelper.CompId()' ";
+                loading("customers_prime_add_fast");
+
+                $.post("../../ERP/proced", { id: procx }, function (data, suc) {
+                    unloading("customers_prime_add_fast");
+                    if (Number(data) > 0) {
+                        var cond = "  phone = N'" + $("#customer_phone_ser").val() + "'";
+                        getjdata({ name: "Customers_Prime", top: "1", cols: "*", tbtype: "view", orderby: "", cond: cond, help: "0" },
+                                function (data) {
+                                    $("#Customer_name").val(data[0].Customer_name)
+                                    $("#phone").val(data[0].phone)
+                                    $("#Customer_address").html(Customer_address)
+                                    $("#customer_id").val(data[0].ID);
+
+                                    $("#model_code").focus();
+                                    document.getElementById("model_code").scrollIntoView();
+                                    // $("#model_code").active();
+
+                                });
+
+
+
+
+                    } else {
+                        //console.log(data);
+                        swal(" راجع صلاحيات الحفظ لم يتم حفظ البيان ");
+                    }
+
+                });
+            }
+        } catch (err) {
+            //console.log(err);
+
+            swal(" من فضلك راجع الصلاحيات ");
+        }
+
+
+
+    });
+    $("#addnewcustbtadvansed").click(function () {
+        //  $("#frmcust").attr("src", "../../WEB/index?id=086a388140f74b3db745ab185719448ctablet&tbh=customers_prime");
+        $("#frmcust").attr("src", "../../ERP/tablet?tbname=customers_prime");
+
+        $("#custmodal").modal("show");
+
+    });
+    $("#showstk").click(function () {
+
+
+        $("#tbstk").empty();
+        getjdata({ name: "material_stock", idload: "tbstk" }, function (data) {
+            $.each(data, function (i, item) {
+
+                var stock = Number(data[i].stock);
+                var classname = '';
+                if (stock > 200) {
+                    classname = 'greentd';
+                } else if (stock < 200 && stock > 100) {
+                    classname = 'yellowtd';
+
+                } else if (stock <= 100) {
+                    classname = 'redtd';
+
+                }
+
+                $("#tbstk").append("<tr><td class='" + classname + "'>" + data[i].number + "</td><td class='" + classname + "'>" + data[i].material_name + "</td><td class='" + classname + "'>" + data[i].old_id + "</td><td class='" + classname + "'>" + data[i].stock + "</td></tr>")
+
+            });
+            try {
+                $("#tbraw").DataTable({ paging: false });
+            } catch (err) {
+
+                ////console.log(err);
+            }
+
+        });
+        $("#skmodal").modal("show");
+
+
+    });
+    searchj({ inputid: "branch_name", name: "branches", cols: 'ID,branch_name,code', filed: " branch_name + isnull(code,'') ", help: "0" }, function (data) {
+        ////console.log(data);
+
+        if ($("#branch_name").val() == "") {
+
+
+            $("#branches_result").empty();
+
+        }
+
+    });
+    setTimeout(function () {
+
+                $("#branches_result").empty();
+
+            }
+            , 2000);
+
+
+    $('#customer_name_ser').on('keypress', function (e) {
+        if (e.which === 13) {
+            choosecustomer(0);
+        }
+    });
+    $('#customer_name_ser').on('input', function (e) {
+        var cond = "  Customer_name like N'%" + $(this).val() + "%'";
+
+        getcust(cond);
+
+
+    });
+
+    $("#quantity").on('keypress', function (e) {
+        if (e.which === 13) {
+
+            savebill();
+
+        }
+    });
+    $("#notes").on('keypress', function (e) {
+        if (e.which === 13) {
+
+            savebill();
+
+        }
+    });
+    $("#btadditem").click(function () {
+
+        savebill();
+
+    });
+    function addfet(datax) {
+
+
+        $(".specif").val('');
+        $(".specif").each(function () {
+
+            try {
+
+                $(this).attr('checked', false);
+                $(this).prop('checked', false);
+                $(this).removeAttr('checked');
+            } catch (err) {
+
+
+            }
+
+        });
+
+
+
+        $.each(datax, function (i, item) {
+            var id = item.feature_name;
+            $("#" + id).val(item.feature_value);
+            $("#" + id).attr("oldval", item.feature_value);
+
+            if ($("#" + id).is(':checkbox') || $("#" + id).is(':radio')) {
+                if ($("#" + id).data("fetname") == item.feature_value && item.feature_value != null) {
+
+                    $("#" + id).attr('checked', true);
+                    $("#" + id).prop('checked', true);
+                }
+                if (item.feature_value == 'checked') {
+                    $("#" + id).attr('checked', true);
+                    $("#" + id).prop('checked', true);
+                }
+
+            }
+
+        });
+        unloading("add_fetures");
+    }
+    function adddtl(datax) {
+        ////console.log(datax);
+        $("#tbitems").html('');
+
+        $.each(datax, function (i, item) {
+            var row_n = datax[i].row_n;
+            var ID = datax[i].ID;
+            var sort = datax[i].sort;
+            var matrial_code = datax[i].matrial_code;
+            var model_code = datax[i].model_code;
+            var model_name = datax[i].model_name;
+            var material_name = datax[i].material_name;
+            var serial = datax[i].serial;
+            var barcode = datax[i].barcode;
+            var Item_name = datax[i].Item_name;
+            // Item_name = model_name + '-' + material_name;
+            var notes = datax[i].notes;
+            var Offer_name = datax[i].Offer_name;
+            var price = datax[i].price;
+            var quantity = datax[i].quantity;
+            var total = datax[i].total;
+            var begin_date = datax[i].begin_date;
+            var father_id = datax[i].father_id;
+            var Company_id = datax[i].Company_id;
+            var user_name = datax[i].user_name;
+            var typoe = datax[i].type_record;
+            var discount = datax[i].discount;
+            var discount_rate = datax[i].discount_rate;
+
+
+
+            var classhid = "";
+
+            if (typoe != "items") {
+                classhid = "hidex";
+            }
+            var itname = "";
+            if (typoe == "services") {
+                itname = " (@info$$title$$Lables_translate$$adds) ";
+            }
+            var readonad = "readonly";
+            if ('@DBHelper.IsAdmin()' == 'true') {
+                readonad = "";
+            }
+
+            $("#tbitems").append("<tr class='" + typoe + "' data-father_id='" + father_id + "'  data-model_code='" + model_code + "' data-matrial_code='" + matrial_code + "' data-barcode='" + barcode + "' data-begin_date='" + begin_date + "' data-user_name='" + user_name + "' data-id='" + ID + "' ><td><input type='checkbox' data-type='" + typoe + "' class='chkitem' data-id='" + ID + "' /></td><td class='moda'></td><td style='text-align:right;'>" + itname + Item_name + "<br>" + model_code + "@" + matrial_code + "</td><td style='text-align:right;'><textarea class='notes_dtl " + classhid + "' data-notes='" + notes + "' data-id='" + ID + "' data-oldval='" + notes + "'>" + notes + "</textarea></td><td><input type='number' style='max-width:50px;text-align:center;border:sold 0.5px;'  class='dtl_quantity " + classhid + "' data-qty0='" + quantity + "' data-id='" + ID + "' value='" + quantity + "' /></td><td type='number'  class='dtl_price' style='color:black;'>" + price + "</td><td><input type='number' style='width:75px;text-align:center;'   data-id='" + ID + "' " + readonad + " class='itemdiscount " + classhid + "' data-disc0='" + discount + "' min='0' max='" + price + "' value ='" + discount + "' /></td><td  style='width:100px;'><input  type='number' style='width:50px;text-align:center;' data-id='" + ID + "'  " + readonad + "  class='itemdiscountrate " + classhid + "' data-discr0='" + discount_rate + "' min='0' max='" + 100 + "' value ='" + discount_rate + "' data-x='x' /></td>  <td class='totexc'>" + total + "</td><td>" + Offer_name + "</td></tr>");
+            $(".chkitem").click(function () {
+
+                if ($(this).is(':checked')) {
+                    var id = $(this).data("id");
+                    $(".chkitem").each(function () {
+                        var id2 = $(this).data("id");
+                        if (id != id2) {
+                            $(this).prop('checked', false);
+
+                        }
+                    });
+                }
+
+
+            });
+
+        });
+        unloading("add_items");
+
+        $(".hidex").hide();
+        $(".dtl_quantity").on('input', function (e) {
+
+            totalx();
+
+        });
+        $(".itemdiscount").on('input', function (e) {
+            var dis = Number($(this).val());
+            var price = Number($(this).parent().parent().find('td').eq(5).html());
+            var disrate = Math.ceil((dis / price) * 100);
+            if (dis > price) {
+                $(this).val(price)
+            }
+
+            $(this).parent().parent().find('td').eq(7).find('input').first().val(disrate);
+            totalx();
+
+        });
+
+        $(".itemdiscountrate").on('input', function (e) {
+            var disrate = Number($(this).val()) / 100;
+            var price = Number($(this).parent().parent().find('td').eq(5).html());
+            var dis = price * disrate
+            $(this).parent().parent().find('td').eq(6).find('input').first().val(dis.toFixed(2).replace(".00", ""));
+            totalx();
+
+        });
+
+        $(".itemdiscount").blur(function () {
+            var qty = $(this).val();
+            var ID = $(this).data("id")
+            var qty0 = $(this).data('disc0');
+            var itnum = $(this).parent().parent().find('td').eq(1).html();
+            var itnam = $(this).parent().parent().find('td').eq(2).html();
+            var contdis = $(this);
+
+            if (Number(qty0) != Number(qty) && $(this).val() != '' && $(this).val() != null && $(this).val() >= 0) {
+                loading("edit_itemdiscount");
+                $.post('../../ERP/Edit3', { tbanme: 'EAAAAHrl+6mHeX394lU4R2zPf4n/8272nR/GAqif2ROOmHRifZHQYOuRsutm8gS0qXSy6g==', colname: 'EAAAAIYEAnWuhAYCVu8Hwc5yjqJe4i/si6SxF8t4JdC83CAx', rowid: ID, cellvall: qty },
+                        function (data, suc) {
+                            unloading("edit_itemdiscount");
+                            ////console.log(data);
+                            if (Number(data) > -1) {
+
+                                contdis.data('disc0', qty);
+                                getbill(" ID ='" + $("#hid").val() + "' ");
+
+                                //   swal("تم تعديل خصم البند رقم " + itnum + "  " + itnam + "  من  (" + qty0 + ") إلى (" + qty + ")")
+
+
+                            } else {
+
+                                // swal("لم يتم تعديل البند راجع الصلاحيات")
+
+                            }
+                        });
+            }
+
+
+        });
+        $(".itemdiscountrate").blur(function () {
+            var contdis = $(this).parent().parent().find('td').eq(6).find('input').first();
+
+            var qty = contdis.val();
+            var ID = contdis.data("id")
+            var qty0 = contdis.data('disc0');
+            var itnum = contdis.parent().parent().find('td').eq(1).html();
+            var itnam = contdis.parent().parent().find('td').eq(2).html();
+            if (Number(qty0) != Number(qty) && contdis.val() != '' && contdis.val() != null && contdis.val() >= 0) {
+                loading("edit_itemdiscountrate");
+
+                $.post('../../ERP/Edit3', { tbanme: 'EAAAAHrl+6mHeX394lU4R2zPf4n/8272nR/GAqif2ROOmHRifZHQYOuRsutm8gS0qXSy6g==', colname: 'EAAAAIYEAnWuhAYCVu8Hwc5yjqJe4i/si6SxF8t4JdC83CAx', rowid: ID, cellvall: qty },
+                        function (data, suc) {
+                            unloading("edit_itemdiscountrate");
+
+                            ////console.log(data);
+                            if (Number(data) > -1) {
+
+                                contdis.data('disc0', qty);
+                                getbill(" ID ='" + $("#hid").val() + "' ");
+
+                                //   swal("تم تعديل خصم البند رقم " + itnum + "  " + itnam + "  من  (" + qty0 + ") إلى (" + qty + ")")
+
+
+                            } else {
+
+                                // swal("لم يتم تعديل البند راجع الصلاحيات")
+
+                            }
+                        });
+            } else {
+
+
+            }
+
+
+
+
+        });
+
+
+
+        $(".notes_dtl").blur(function () {
+            var notes = $(this).val();
+            var ID = $(this).data("id")
+            var oldnotes = $(this).data('oldval');
+
+            var contx = $(this);
+            if (oldnotes != notes) {
+                loading("edit_notes_dtl");
+                $.post('../../ERP/Edit3', { tbanme: 'EAAAAHrl+6mHeX394lU4R2zPf4n/8272nR/GAqif2ROOmHRifZHQYOuRsutm8gS0qXSy6g==', colname: 'EAAAADTBDnfCFVxODQVQCfqCs/dqvfJAaXV0cCK9txtOe8/f', rowid: ID, cellvall: notes },
+                        function (data, suc) {
+                            unloading("edit_notes_dtl");
+                            ////console.log(data);
+                            if (Number(data) > -1) {
+
+                                contx.data('oldval', notes);
+
+
+                            } else {
+                                contx.val(oldnotes);
+                                swal("لم يتم تعديل البند راجع الصلاحيات")
+
+                            }
+                        });
+            }
+
+
+        });
+
+        $(".dtl_quantity").blur(function () {
+            var qty = $(this).val();
+            var ID = $(this).data("id")
+            var qty0 = $(this).data('qty0');
+            var itnum = $(this).parent().parent().find('td').eq(1).html();
+            var itnam = $(this).parent().parent().find('td').eq(2).html();
+
+            if (Number(qty0) != Number(qty) && $(this).val() != '' && $(this).val() != null && $(this).val() >= 0) {
+                loading("edit_dtl_quantity");
+                $.post('../../ERP/Edit3', { tbanme: 'EAAAAHrl+6mHeX394lU4R2zPf4n/8272nR/GAqif2ROOmHRifZHQYOuRsutm8gS0qXSy6g==', colname: 'EAAAADKTXBvwtoUDY0FPWqTlamn82Re2BEXSAMnVSgZPaCE2', rowid: ID, cellvall: qty },
+                        function (data, suc) {
+                            unloading("edit_dtl_quantity");
+                            ////console.log(data);
+                            if (Number(data) > -1) {
+
+                                $(this).data('qty0', qty);
+                                getbill(" ID ='" + $("#hid").val() + "' ");
+
+                                // swal("تم تعديل عدد البند رقم " + itnum +"  " + itnam +"  من عدد (" + qty0 +") إلى (" +  qty +")")
+
+
+                            } else {
+
+                                swal("لم يتم تعديل البند راجع الصلاحيات")
+
+                            }
+                        });
+            }
+
+
+        });
+
+
+
+        totalx();
+        clearitem();
+    }
+
+    function totalx() {
+        var totx = 0;
+        var discx = 0;
+        $("#tbitems tr").each(function () {
+            try {
+                var quantity = $(this).find('td').eq(4).find('input').first().val();
+                var price = $(this).find('td').eq(5).text();
+                var disc = $(this).find('td').eq(6).find('input').first().val();
+                // var disc_rate = $(this).find('td').eq(7).find('input').first().val();
+
+                var tot = (Number(price) - Number(disc)) * Number(quantity);
+                ////console.log(tot);
+                $(this).find('td').eq(8).html(tot.toFixed(2).replace(".00", ""));
+                var tota = Number(price) * Number(quantity);
+                var todi = Number(disc) * Number(quantity);
+
+                totx += tota;
+                discx += todi;
+
+            } catch (err) {
+
+                ////console.log(err)
+            }
+
+        });
+        $("#totx").html(totx.toFixed(2).replace(".00", ""));
+        $("#discx").html(discx.toFixed(2).replace(".00", ""));
+        var netx = Number(totx) - Number(discx);
+        $("#netx").html(netx.toFixed(2).replace(".00", ""));
+        var tax = netx * 0.15;
+        $("#taxx").html(tax.toFixed(2).replace(".00", ""));
+        var totxend = netx * 1.15;
+
+        $("#totxend").html(totxend.toFixed(2).replace(".00", ""));
+
+
+
+
+    }
+    function additem(hid, qty, price, model_id, material_id, notes) {
+        loading("add_items");
+
+        $.post("../../ERP/addmaterialitem", { model_id: model_id, material_id: material_id, hid: hid, qty: qty, price: price, notes: notes }, function (data, suc) {
+
+
+            console.log(data);
+
+            if (data.indexOf('notsuccess') > -1) {
+                unloading("add_items");
+
+                swal("لم يتم الحفظ من فضلك راجع الصلاحيات")
+
+            } else {
+
+                adddtl(data);
+                $(".entry").val('');
+                $("#quantity").val("1");
+
+            }
+
+        });
+
+    }
+    function clearitem() {
+        $("#model_result_end").empty();
+        $("#material_result_end").empty();
+        $("#quantity").val('1');
+        $("#notes").val('');
+
+
+    }
+    function savebill() {
+        var model_id = $("#model_result_end tr").first().data('id');
+        var material_id = $("#material_result_end tr").first().data('id');
+        var quantity = $("#quantity").val();
+        var notes = $("#notes").val();
+        var price = 0;
+        var price1 = Number($("#material_result_end tr").find('td').eq(2).html());
+        var price2 = Number($("#model_result_end tr").find('td').eq(2).html());
+
+
+        if (price1 > price2) {
+            price = price1;
+        } else {
+            price = price2;
+
+        }
+        //////console.log('price2 =' + price2)
+        // ////console.log('price1 =' + price1)
+        //////console.log('price =' + price)
+        if (model_id != '' && material_id != '' && material_id != null && model_id != null) {
+
+
+            if (quantity > 0) {
+                var hid = $("#hid").val();
+                if (hid == "") {
+                    if ($("#customer_id").val() == "") {
+                        swal("يجب اختيار اسم العميل أولا")
+
+                    } else if ($("#branch_name").data("id") == "") {
+                        swal("يجب اختيار اسم الفرع أولا")
+                    } else {
+
+
+                        var sorty = $("#Sales_order_type").val();
+                        $.post("../../erp/addsalesorder", { related_doc: $("#related_doc").val(), sales_order_type: sorty, location: $("#location").val(), branch_name: $("#branch_name").data("id"), custid: $("#customer_id").val(), date1: datexformat($("#date1").val(), 'MM-dd-yyyy'), date2: datexformat($("#date2").val(), 'MM-dd-yyyy'), phone: $("#phone").val(), genid: $("#genid").val() }, function (data, suc) {
+
+                            if (data == $("#genid").val()) {
+
+                                $("#hid").val(data);
+                                additem(data, quantity, price, model_id, material_id, notes);
+                                clearitem();
+                                ////console.log(" getdata=" + $("#hid").val());
+                                setTimeout(function () { getbill(" ID ='" + $("#hid").val() + "' ") }, 200);
+
+                            } else {
+                                ////console.log(data);
+                                swal("لم يتم الحفظ من فضلك راجع السصلاحيات");
+                            }
+                        });
+                    }
+
+                } else {
+                    additem(hid, quantity, price, model_id, material_id, notes);
+                    ////console.log(" getdata2=" + $("#hid").val());
+
+                    getbill(" ID ='" + $("#hid").val() + "' ", function (datad) {
+
+                    });
+                }
+            } else {
+
+                swal("يجب أن تكون الكمية أكثر من 1")
+
+            }
+
+
+        } else {
+
+            swal("يرجى اختيار بيانات المنتج أولا !")
+        }
+
+
+    }
+    $('#customer_phone_ser').on('keypress', function (e) {
+        if (e.which === 13) {
+            choosecustomer(0);
+        }
+    });
+    $("#bt_customer").click(function () {
+        choosecustomer(0);
+
+    });
+    $('#customer_phone_ser').on('input', function (e) {
+        var cond = "  phone like '" + $(this).val() + "%'";
+
+        getcust(cond);
+
+
+    });
+    function getcust(cond) {
+        getjdata({ name: "Customers_Prime", top: "5", cols: "*", tbtype: "view", orderby: "", cond: cond, help: "0" },
+                function (data) {
+                    // ////console.log(data);
+                    $('#customer_result').empty();
+
+                    $.each(data, function (i, item) {
+                        $('#customer_result').append('<tr class="customer_id" data-id="' + item.ID + '" ><td>' + item.code + '</td><td colspan=2>' + item.Customer_name + '</td><td>' + item.phone + '</td><td colspan=2>' + item.Customer_address + '</td></tr>')
+
+                    });
+
+                    $("#customer_result tr td").click(function () {
+
+                        var i = $(this).parent().index();
+
+                        choosecustomer(i);
+                    });
+
+                }
+        );
+    }
+
+    function choosecustomer(i) {
+        var cor = $("#customer_result").find('tr').length;
+
+        var rw = $("#customer_result").find('tr').eq(i);
+        $("#model_result").empty();
+
+
+        if (cor == 0) {
+
+            var cor2 = $("#customer_result_end").find('tr').length;
+            if (cor2 == 0) {
+                swal("يجب ايجاد نتيجة واحدة على الأقل")
+            }
+        } else {
+            $("#customer_result").empty();
+
+            $("#customer_result_end").empty();
+            //$("#customer_result_end").append(rw);
+            var cust_id = rw.first().data('id');
+            var cust_name = rw.first().find('td').eq(1).html();
+            var cust_code = rw.first().find('td').eq(0).html();
+            var cust_phone = rw.first().find('td').eq(2).html();
+            var cust_address = rw.first().find('td').eq(3).html();
+            $("#Customer_name").val(cust_name)
+            $("#phone").val(cust_phone)
+            $("#Customer_address").html(cust_address)
+            $("#customer_id").val(cust_id);
+            $("#model_code").focus();
+            document.getElementById("model_code").scrollIntoView();
+        }
+    }
+
+    function choosemodel(i) {
+        var cor = $("#model_result").find('tr').length;
+
+        var rw = $("#model_result").find('tr').eq(i);
+        $("#model_result").empty();
+
+
+        if (cor == 0) {
+
+            var cor2 = $("#model_result_end").find('tr').length;
+            if (cor2 == 0) {
+                swal("يجب ايجاد نتيجة واحدة على الأقل")
+            }
+        } else {
+            $("#model_result_end").empty();
+            $("#model_result_end").append(rw);
+            $("#material_code").focus();
+            $("#material_code").select();
+
+        }
+    }
+    function choosmaterial(i) {
+        var cor = $("#material_result").find('tr').length;
+        var rw = $("#material_result").find('tr').eq(i);
+        $("#material_result").empty();
+
+
+        if (cor == 0) {
+            var cor2 = $("#material_result_end").find('tr').length;
+            if (cor2 == 0) {
+                swal("يجب ايجاد نتيجة واحدة على الأقل")
+            }
+
+        } else {
+
+            $("#material_result_end").empty();
+            $("#material_result_end").append(rw);
+            $("#quantity").focus();
+            $("#quantity").select();
+        }
+    }
+    $("#bt_material").click(function () {
+        choosmaterial(0);
+
+    });
+    $("#bt_model").click(function () {
+        choosemodel(0);
+
+    });
+    $('#model_code').on('keypress', function (e) {
+        if (e.which === 13) {
+            choosemodel(0);
+        }
+    });
+    $('#model_name').on('keypress', function (e) {
+        if (e.which === 13) {
+            choosemodel(0);
+        }
+    });
+    $('#material_code').on('keypress', function (e) {
+        if (e.which === 13) {
+            choosmaterial(0);
+        }
+    });
+    $('#material_name').on('keypress', function (e) {
+        if (e.which === 13) {
+            choosmaterial(0);
+        }
+    });
+    function getmatrial(cond) {
+        getjdata({ name: "manufacturing_material", help: "1", top: "5", cols: "*", tbtype: "view", orderby: "", cond: cond },
+                function (data) {
+                    //////console.log(data);
+                    $('#material_result').empty();
+
+                    $.each(data, function (i, item) {
+                        $('#material_result').append('<tr class="material_id" data-id="' + item.ID + '" ><td></td><td>' + item.code + '</td><td>' + item.material_name + '</td><td>' + item.stock + '</td></tr>')
+
+                    });
+
+                    $("#material_result tr td").click(function () {
+                        var i = $(this).parent().index();
+
+                        choosmaterial(i);
+                    });
+                }
+        );
+    }
+    $('#material_code').on('input', function (e) {
+        var cond = "  code like '%" + $(this).val() + "%' and stock > 30 ";
+
+        getmatrial(cond);
+    });
+
+
+    $('#material_name').on('input', function (e) {
+        var cond = "  material_name like N'%" + $(this).val() + "%' and stock > 30 ";
+
+        getmatrial(cond);
+
+
+    });
+
+    function getmodel(cond) {
+        getjdata({ name: "Items_types", top: "5", cols: "*", tbtype: "view", orderby: "", cond: cond, help: "0" },
+                function (data) {
+                    //////console.log(data);
+                    $('#model_result').empty();
+
+                    $.each(data, function (i, item) {
+                        $('#model_result').append('<tr class="material_id" data-id="' + item.ID + '" ><td>' + item.Type_code + '</td><td colspan=2>' + item.Items_Type + '</td><td></td></tr>')
+
+                    });
+                    $("#model_result tr td").click(function () {
+                        var i = $(this).parent().index();
+                        choosemodel(i);
+                    });
+
+                }
+        );
+    }
+
+    $('#model_code').on('input', function (e) {
+        var cond = "  Type_code	 like '%" + $(this).val() + "%'";
+
+        getmodel(cond);
+    });
+
+
+
+    $('#model_name').on('input', function (e) {
+        var cond = "  Items_Type like N'%" + $(this).val() + "%'";
+
+        getmodel(cond);
+
+
+    });
+
+    newbill();
+    function newbill() {
+        $('body').find('input').each(function () {
+            $(this).val('');
+        });
+        $('body').find('textarea').each(function () {
+            $(this).val('');
+        });
+
+        $("#brname").html('');
+        $("#billadd").empty();
+        $("#allow_edit").prop('checked', false);
+        $("#branch_name").val('@DBHelper.UserBranshName()');
+        $("#branch_name").data("id", '@DBHelper.UserBranshID("")');
+        $("#quantity").val('1');
+        $("#notes").val('');
+        $("#totx").val('0');
+
+        $("#material_result_end").empty();
+        $("#model_result_end").empty();
+        $("#customer_result_end").empty();
+        $("#tbitems").empty();
+        $("#genid").val(uuidv4());
+        var start = gedatenowx("dd-MM-yyyy");
+        // var end = gedateadd("dd-MM-yyyy", 25);
+
+        $("#date1").val(start);
+        getjdata({ name: 'sales_order_branch_plan_fun', parm: "('@DBHelper.UserBranshID("")')" }, function (data) {
+
+            var end = data[0].delivery_date;
+
+            console.log(end);
+            $("#date2").val(end);
+
+
+        });
+        $("#date2").blur(function () {
+            var dd1 = $('#date1').val().replace("/", "-").replace("/", "-").split('-')[0];
+            var mm1 = $('#date1').val().replace("/", "-").replace("/", "-").split('-')[1];
+            var yy1 = $('#date1').val().replace("/", "-").replace("/", "-").split('-')[2];
+            var dd2 = $('#date2').val().replace("/", "-").replace("/", "-").split('-')[0];
+            var mm2 = $('#date2').val().replace("/", "-").replace("/", "-").split('-')[1];
+            var yy2 = $('#date2').val().replace("/", "-").replace("/", "-").split('-')[2];
+            var date1 = mm1 + '-' + dd1 + '-' + yy1;
+
+            var date2 = mm2 + '-' + dd2 + '-' + yy2;
+
+
+            var def = datediff(date1, date2);
+            //if (def < 15) {
+            //    swal("تنبيه لا يمكن ضبط يوم تسليم قبل 15 يوم من البيع")
+            //    $("#date2").val(end);
+            //}
+
+
+        });
+        if ('@DBHelper.IsAdmin()' == 'true' || '@DBHelper.IsInGroup("allbranches")' == 'true') {
+
+        } else {
+
+            try {
+                $("#date1").attr("readonly", true);
+                //  $("#date2").attr("readonly", true);
+
+                $("#date1").prop("readonly", true);
+                //$("#date2").prop("readonly", true);
+            } catch (err) {
+
+            }
+        }
+        if ('@DBHelper.IsAdmin()' == 'true' || '@DBHelper.IsInGroup("allbranches")' == 'true') {
+            $('.date-picker').datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+        }
+
+
+        $("#customer_phone_ser").focus();
+        $("#customer_phone_ser").select();
+        totalx();
+        $(".specif").val('');
+        $(".specif").each(function () {
+
+            try {
+
+                $(this).attr('checked', false);
+                $(this).prop('checked', false);
+                $(this).removeAttr('checked');
+            } catch (err) {
+
+
+            }
+
+        });
+
+    }
+    $("#newinvSales_order").click(function () {
+
+        newbill();
+    });
+    $('#sernumSales_order').on('keypress', function (e) {
+        if (e.which === 13) {
+            var strcond = "branch_id='@DBHelper.UserBranshID("")'";
+
+            if ('@DBHelper.IsAdmin()' == 'true' || '@DBHelper.IsInGroup("allbranches")' == 'true') {
+                strcond = "company_id='@DBHelper.CompId()'"
+
+            }
+            getbill(" invoice_number =" + $('#sernumSales_order').val() + " and  " + strcond)
+
+        }
+    });
+
+    $("#first_Sales_order").click(function () {
+        var strcond = "where v.branch_id='@DBHelper.UserBranshID("")'";
+
+        if ('@DBHelper.IsAdmin()' == 'true' || '@DBHelper.IsInGroup("allbranches")' == 'true') {
+            strcond = " where v.company_id='@DBHelper.CompId()'"
+
+        }
+
+        getbill(" ID =(select top 1 v.ID from dbo.Sales_order_view v " + strcond + "  order by v.begin_date  ) ")
+
+    });
+    $("#last_Sales_order").click(function () {
+        var strcond = "where v.branch_id='@DBHelper.UserBranshID("")'";
+
+        if ('@DBHelper.IsAdmin()' == 'true' || '@DBHelper.IsInGroup("allbranches")' == 'true') {
+            strcond = " where v.company_id='@DBHelper.CompId()'"
+
+        }
+        getbill(" ID =(select top 1 v.ID from dbo.Sales_order_view v  " + strcond + " order by v.begin_date desc ) ")
+
+    });
+    $("#next_Sales_order").click(function () {
+        var inv = $("#invoice_number").val();
+        if (Number(inv) > 0) {
+
+        } else {
+
+            inv = 0;
+        }
+
+        var strcond = "where v.branch_id='@DBHelper.UserBranshID("")'";
+
+        if ('@DBHelper.IsAdmin()' == 'true' || '@DBHelper.IsInGroup("allbranches")' == 'true') {
+            strcond = " where v.company_id='@DBHelper.CompId()'"
+
+        }
+        getbill(" ID =(select top 1 v.ID from dbo.Sales_order_view v  " + strcond + " and v.invoice_number > " + $("#invoice_number").val() + " order by v.begin_date  ) ")
+
+    });
+    $("#back_Sales_order").click(function () {
+        var inv = $("#invoice_number").val();
+        if (Number(inv) > 0) {
+
+        } else {
+
+            inv = '10000000000'
+        }
+        var strcond = "where v.branch_id='@DBHelper.UserBranshID("")'";
+
+        if ('@DBHelper.IsAdmin()' == 'true' || '@DBHelper.IsInGroup("allbranches")' == 'true') {
+            strcond = " where v.company_id='@DBHelper.CompId()'"
+
+        }
+        getbill(" ID =(select top 1 v.ID from dbo.Sales_order_view v  " + strcond + " and v.invoice_number <" + inv + "  order by v.begin_date desc ) ")
+
+    });
+    function getbill(cond, afterget) {
+        loading("lo_Sales_order_view");
+        getjdata({ name: "Sales_order_view", top: "1", cols: "*", tbtype: "view", orderby: "", cond: cond, help: "0" },
+                function (data) {
+                    try {
+
+                        //console.log(data);
+                        var ID = data[0].ID;
+                        var invoice_number = data[0].invoice_number;
+                        var delivery_date = data[0].delivery_date;
+                        var invoice_date = data[0].invoice_date;
+                        var customer_id = data[0].customer_id;
+                        var related_doc = data[0].related_doc
+
+                        var location_name = data[0].location_name;
+                        var Customer_name = data[0].Customer_name;
+                        var phone = data[0].phone;
+                        var Customer_address = data[0].Customer_address;
+                        var begin_date = data[0].begin_date;
+                        var Company_id = data[0].Company_id;
+                        var branch_id = data[0].branch_id;
+                        var branch_name = data[0].branch_name;
+                        var delivery_place = data[0].delivery_place;
+                        var user_name = data[0].user_name;
+                        var order_type_name = data[0].order_type_name;
+                        var order_type_id = data[0].order_type_id;
+                        var allow_edit = data[0].allow_edit;
+                        var branch_name_id = data[0].branch_name_id;
+                        console.log(invoice_date);
+                        console.log(delivery_date);
+                        console.log(begin_date);
+
+                        $("#hid").val(ID);
+                        $("#related_doc").val(related_doc);
+                        $("#invoice_number").val(invoice_number);
+                        $("#begin_date").html(begin_date);
+                        $("#branch_name").val(delivery_place);
+
+                        $("#brname").html(branch_name);
+                        $("#branch_name").data("id", branch_name_id);
+
+                        $("#user_name").val(user_name);
+                        $("#customer_id").val(customer_id);
+                        $("#Customer_name").val(Customer_name);
+                        $("#phone").val(phone);
+                        $("#Customer_address").val(Customer_address);
+                        //console.log("order_type_name:" + order_type_name)
+                        $('#location option').prop('selected', false);
+                        $('#location option[value=' + location_name + ']').prop('selected', true);
+                        $('#Sales_order_type').empty();
+
+                        selectj({ name: "Sales_order_type", cond: " ID='" + order_type_id + "'" }, function () {
+
+
+                        });
+                        //$('#Sales_order_type option').prop('selected', false);
+
+                        //try {
+                        //    $('#Sales_order_type option[value=' + order_type_id + ']').prop('selected', true);
+
+                        //} catch (err)
+                        //{
+
+
+                        //}
+                        try {
+                            //console.log("allow_edit");
+                            //console.log(allow_edit);
+                            if (allow_edit) {
+                                $("#allow_edit").prop('checked', true);
+
+                            } else {
+                                $("#allow_edit").prop('checked', false);
+
+
+                            }
+
+
+                        } catch (err) {
+
+
+                        }
+
+
+                        $("#date1").val(invoice_date);
+                        $("#date2").val(delivery_date);
+
+
+                        try {
+                            afterget(data);
+
+                        } catch (err) {
+
+                        }
+                        loading("add_items");
+                        getjdata({ name: "sales_order_items_function", top: "10000000", cols: "*", tbtype: "view", orderby: "", cond: "", parm: "('" + ID + "')", help: "0" },
+                                function (datax) {
+
+                                    adddtl(datax);
+
+
+
+                                });
+                        loading("add_fetures");
+                        getjdata({ name: "Sales_order_features_list_fun", top: "10000000", cols: "*", tbtype: "view", orderby: "", cond: "", parm: "('" + ID + "','" + $("#customer_id").val() + "')", help: "0" },
+                                function (datax) {
+                                    ////console.log(datax);
+                                    addfet(datax);
+
+
+
+                                });
+                        getsales_ivoice(ID);
+
+                        unloading("lo_Sales_order_view");
+
+                    } catch (err) {
+                        unloading("lo_Sales_order_view");
+                        //console.log(err);
+                        swal("لا يوجد إذن بهذا الرقم !")
+                    }
+
+
+
+
+
+                }
+        );
+
+    }
+
+    function getsales_ivoice(ID) {
+
+        getjdata({ name: "payment_summery", top: "1", cols: "*", tbtype: "view", orderby: "", cond: "", parm: "('" + ID + '_so' + "')", help: "0" },
+                function (datax) {
+                    $("#billadd").html('');
+                    $("#billhead").html('<tr><th>@info$$title$$Lables_translate$$bill</th><th>@info$$title$$Lables_translate$$bill_date</th><th>@info$$title$$Lables_translate$$bill_value</th><th>@info$$title$$Lables_translate$$paid</th> <th>@info$$title$$Lables_translate$$remaining</th></tr>');
+
+                    $.each(datax, function (i, item) {
+
+                        $("#billadd").append("<tr  data-id='" + item.ID + "'><td>" + item.invoice_number + "</td> <td>" + item.invoice_date + "</td><td>" + item.totinv + "</td><td>" + item.pay + "</td><td>" + item.rimane + "</td></tr>")
+
+
+                    });
+
+                    $("#billadd td").click(function () {
+
+                        var per = $(this).parent();
+                        var hid = per.data("id");
+
+                        var win = window.open('../../Publish/POS/?invid=' + hid, '_blank');
+                        if (win) {
+                            //Browser has allowed it to be opened
+                            win.focus();
+                        } else {
+                            //Browser has blocked it
+                            alert('Please allow popups for this website');
+                        }
+                    });
+                    $("#billadd td").hover(function () {
+
+                                var per = $(this).parent();
+
+                                per.find('td').each(function () {
+                                    $(this).css("background-color", "blue");
+                                    $(this).css("color", "#fff");
+
+                                });
+                            },
+                            function () {
+
+                                var per = $(this).parent();
+
+                                per.find('td').each(function () {
+                                    $(this).css("background-color", "");
+                                    $(this).css("color", "");
+
+                                });
+                            }
+                    )
+
+                });
+    }
+    $("#ment_Sales_order").click(function () {
+
+        var url = "../../WEB/bill?id=58def2023dd74612a01f8a7496131800&tbh=Sales_order&tbd=Sales_order_items"
+
+        if ($("#invoice_number").val() != '') {
+            url += "&invnum=" + $("#invoice_number").val();
+        }
+
+        window.open(url, "_blank");
+    });
+    $("#print_Sales_order").click(function () {
+
+        if ($("#hid").val() == '') {
+            swal('تنبيه', 'من فضلك قم باختيار الإذن أولا  !')
+
+        }
+        else {
+            // var url = "../../Billapi/print_a4?tbh=sales_order&tbd=sales_order_items&id=" + $("#hid").val();
+            var url = "../../Billapi/print_sales_a42test?id=" + $("#hid").val();
+
+            window.open(url, "_blank");
+        }
+    });
+
+    $(".fetdiv").hide();
+
+    var isfetload = 0;
+    getfet();
+    $("#spabtn").click(function () {
+
+
+        // Rest 2 ***************
+        if ($(this).data("show") == "0") {
+            $(this).data("show", "1");
+            $(this).html("@info$$title$$Lables_translate$$hide_spec");
+            $(".fetdiv").show();
+        } else {
+            $(this).data("show", "0");
+            $(this).html("@info$$title$$Lables_translate$$show_spec");
+            $(".fetdiv").hide();
+        }
+        if (isfetload == 0) {
+            isfetload = 1;
+
+
+        }
+
+    });
+
+    function getfet() {
+
+        getjdata({ name: "Manufacture_feature_list", top: "5", cols: "*", tbtype: "view", orderby: "code asc ", parm: "", help: "0" }, function (datafet) {
+            $("#divfet").html('');
+            $("#fetlistse").html('');
+            var hid = $("#hid").val();
+            $.each(datafet, function (ife, itemfe) {
+                var fetid = datafet[ife].ID;
+                var feature_name = itemfe.list_name;
+                $("#fetlistse").append("<option value='" + fetid + "'>" + feature_name + "</option>")
+                var numx = ife;
+                $("#divfet").append("<div id='" + fetid + "' class='row sectionfet'><h3 class='fetnameh'>" + feature_name + "</h3> <table class='divspecif' id='specif_" + fetid + "'></table></div>");
+
+
+                getjdata({ name: "Sales_order_features_list_function7", top: "50000", cols: "*", tbtype: "view", orderby: "", parm: "('" + hid + "','" + fetid + "','" + $("#customer_id").val() + "')", help: "0" }
+
+                        , function (dataf, statusf) {
+                            ////console.log(dataf);
+                            var ix;
+                            $.each(dataf, function (i, item) {
+
+
+                                var rownum = Math.ceil((i + 1) / 7);
+
+                                if ($("#row_" + fetid + '_' + rownum).length == 0) {
+                                    $("#specif_" + fetid).append("<tr class='trx' id='row_" + fetid + '_' + rownum + "' ></tr>");
+                                }
+                                if (item.feature_value != null) {
+                                    ////console.log(item.feature_value);
+
+                                    if (item.feature_value.indexOf("ملاحظات") > -1) {
+                                        i = i + 3;
+                                        $("#row_" + fetid + '_' + rownum).append("<td class='tdx' colspan='3' >" + item.feature_value + "</td>")
+
+                                    } else {
+                                        $("#row_" + fetid + '_' + rownum).append("<td class='tdx' >" + item.feature_value + "</td>")
+
+                                    }
+
+                                }
+
+                            });
+
+
+                            ;
+                            if ($(".specif").first().data("iseventb") == "1") {
+
+                            } else {
+
+                                $(".specif").focus(function () {
+                                    ////console.log($(this).prop("tagName").toLowerCase() + 'fo');
+                                    if ($(this).prop("tagName").toLowerCase() == "textarea") {
+                                        //$(this).css("position","absolute");
+                                        //$(this).css("z-index", "9999999");
+                                        //$(this).attr("cols", "40");
+                                        //$(this).attr("rows", "5");
+                                        //$(this).css("text-align", "center;");
+
+                                    }
+
+                                });
+                                $(".specif").blur(function () {
+                                    ////console.log($(this).prop("tagName").toLowerCase() + 'bl');
+
+                                    $(this).prop("tagName").toLowerCase();
+                                    if ($(this).prop("tagName").toLowerCase() == "textarea") {
+                                        // $(this).css("width", "100%;");
+
+
+
+                                    }
+
+                                    $(".specif").each(function () {
+
+                                        if ($(this).val() == '') {
+                                            $(this).css("background-color", "yellow");
+
+                                        } else {
+
+                                            $(this).css("background-color", "#fff");
+
+                                        }
+
+
+                                    });
+                                });
+                                $(".specif").change(function () {
+                                    ;
+                                    if ($(this).is(':radio')) {
+                                        var namespx = $(this).attr("name");
+                                        $(".specif").each(function () {
+                                            if ($(this).is(':radio')) {
+                                                var id = $(this).data("id");
+                                                var namesp = $(this).attr("name");
+                                                var fet = "";
+                                                var hid = $("#hid").val();
+                                                if ($(this).is(':checked') && namespx == namesp) {
+                                                    fet = $(this).data("fetname");
+                                                    var udi = uuidv4();
+
+                                                    var loadsave_sales_feture = "save_sales_feture" + udi
+                                                    loading(loadsave_sales_feture);
+
+                                                    $.post('../../ERP/save_sales_feture', { id: id, fet: fet, hid: hid }
+                                                            , function (data, suc) {
+                                                                unloading(loadsave_sales_feture);
+
+
+                                                            });
+                                                } else {
+                                                    if (namespx == namesp) {
+                                                        fet = "";
+                                                        var udi = uuidv4();
+
+                                                        var loadsave_sales_feture = "save_sales_feture" + udi
+                                                        loading(loadsave_sales_feture);
+
+                                                        $.post('../../ERP/save_sales_feture', { id: id, fet: fet, hid: hid }
+                                                                , function (data, suc) {
+                                                                    unloading(loadsave_sales_feture);
+
+                                                                });
+                                                    }
+
+                                                }
+
+
+                                            }
+                                        });
+
+                                    }
+
+
+                                    if ($(this).is(':checkbox')) {
+                                        var id = $(this).data("id");
+                                        var fet = "";
+                                        var hid = $("#hid").val();
+                                        if ($(this).is(':checked')) {
+                                            fet = $(this).data("fetname");
+                                            if (fet == "" || fet == " " || fet == null) {
+                                                fet = "checked";
+
+                                            }
+                                            var udi = uuidv4();
+
+                                            var loadsave_sales_feture = "save_sales_feture" + udi
+                                            loading(loadsave_sales_feture);
+
+                                            $.post('../../ERP/save_sales_feture', { id: id, fet: fet, hid: hid }
+                                                    , function (data, suc) {
+                                                        unloading(loadsave_sales_feture);
+
+                                                    });
+                                        } else {
+                                            fet = "";
+                                            var udi = uuidv4();
+
+                                            var loadsave_sales_feture = "save_sales_feture" + udi
+                                            loading(loadsave_sales_feture);
+
+                                            $.post('../../ERP/save_sales_feture', { id: id, fet: fet, hid: hid }
+                                                    , function (data, suc) {
+                                                        unloading(loadsave_sales_feture);
+
+                                                    });
+                                        }
+
+
+
+                                    }
+                                });
+                                $(".specif").blur(function () {
+                                    $(".specif").each(function () {
+
+                                        if ($(this).val() == '') {
+                                            $(this).css("background-color", "yellow");
+
+                                        } else {
+
+                                            $(this).css("background-color", "#fff");
+
+                                        }
+
+
+                                    });
+                                    if ($(this).is(':checkbox') == false && $(this).is(':radio') == false) {
+                                        var id = $(this).data("id");
+                                        var fet = $(this).val();
+                                        // var oldval = $(this).data('oldval');
+
+                                        var hid = $("#hid").val();
+
+
+                                        //////console.log(oldval);
+
+                                        if (hid != "" && fet != null) {
+                                            ////console.log(fet);
+                                            ////console.log(id);
+                                            ////console.log(hid);
+                                            var udi = uuidv4();
+
+                                            var loadsave_sales_feture = "save_sales_feture" + udi
+                                            loading(loadsave_sales_feture);
+
+                                            $.post('../../ERP/save_sales_feture', { id: id, fet: fet, hid: hid }
+                                                    , function (data, suc) {
+                                                        unloading(loadsave_sales_feture);
+
+                                                    });
+                                        } else {
+                                            ////console.log("fetisnull");
+
+                                        }
+
+                                    }
+                                });
+                                $(".specif").each(function () {
+
+                                    $(this).attr("data-iseventb", "1");
+                                    var id = $(this).data("id");
+                                    $("#" + id).attr("oldval", item.feature_value);
+
+                                });
+                            }
+
+                        });
+            });
+            $(".sectionfet").hide();
+            var idx = $('#fetlistse').val();
+            ////console.log(idx);
+            $("#" + idx).show();
+            $('#fetlistse').on('change', function () {
+                $(".sectionfet").hide();
+                var idx = $(this).val();
+                ////console.log(idx)
+                $("#" + idx).show();
+            });
+
+
+        });
+    }
+
+    var innum = getpar('invnum');
+    if (Number(innum) > 0) {
+        // var strcond = " and branch_id='@DBHelper.UserBranshID("")'";
+
+        // if ('@DBHelper.IsAdmin()' == 'true'|| '@DBHelper.IsInGroup("allbranches")' == 'true')
+        // {
+        //     strcond = " and company_id='@DBHelper.CompId()'"
+
+        // }
+        getbill("invoice_number =" + innum + "  " + strcond);
+    }
+    var inid = getpar('invid');
+    if (inid != '') {
+
+        getbill("ID ='" + inid + "'")
+    }
+    function savehead() {
+
+        var hid = $("#hid").val();
+        if (hid != "") {
+
+            getbill(" ID ='" + hid + "' ", function (data) {
+                try {
+                    if (Number(data[0].invoice_number) > 0) {
+
+                        swal("تم حفظ الإذن بنجاح", "فاتورة رقم" + data[0].invoice_number);
+                    }
+
+                } catch (err) {
+
+                }
+
+            });
+
+        } else {
+
+            swal("قم بملأ بيانات الإذن أولا")
+        }
+    }
+    $("#save_sales_order").click(function () {
+        edith();
+        savehead();
+
+
+    });
+
+    function edith() {
+        var hid = $("#hid").val();
+        if (hid != "") {
+            var sorty = $("#Sales_order_type").val();
+            $.post("../../erp/addsalesorder", { related_doc: $("#related_doc").val(), sales_order_type: sorty, location: $("#location").val(), branch_name: $("#branch_name").data("id"), custid: $("#customer_id").val(), date1: datexformat($("#date1").val(), 'MM-dd-yyyy'), date2: datexformat($("#date2").val(), 'MM-dd-yyyy'), phone: $("#phone").val(), genid: hid },
+                    function (data, suc) {
+
+                        console.log(data);
+                    });
+        }
+    }
+
+    $("#delete_sales_order").click(function () {
+
+        var hid = $("#hid").val();
+        if (hid != "" && $("#invoice_number").val() != "") {
+            swal({
+                title: "هل أنت متأكد من تريد حذف رقم" + $("#invoice_number").val(),
+                text: "في حال حذف الإذن لا يمكنك استعادته مرة أخرى ",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "نعم قم بالحذف نهائياً",
+                closeOnConfirm: false
+            }, function () {
+                $.post("../../ERP/salesorderdelete", { hid: $('#hid').val() }, function (data, suc) {
+
+                    if (Number(data) > 0) {
+                        swal("تم حذف الإذن بنجاح")
+
+                    }
+                    else {
+
+                        swal("لم يتم حذف الإذن راجع الصلاحيات")
+
+                    }
+                });
+            });
+        } else {
+
+            swal("يجب اختيار الإذن أولا !")
+        }
+    });
+    deleteaddfunc();
+    function deleteaddfunc() {
+
+        $("#delete_row").click(function () {
+            var xc = 0;
+            $(".chkitem").each(function () {
+
+                if ($(this).is(':checked')) {
+                    xc += 1;
+                    var id = $(this).data('id');
+                    var itnum = $(this).parent().parent().find('td').eq(1).html();
+                    var itnam = $(this).parent().parent().find('td').eq(2).html();
+
+                    var typeoo = $(this).data("type")
+                    swal({
+                        title: "هل أنت متأكد من أنك تريد  حذف  البند رقم " + itnum + "  " + itnam + " ",
+                        text: "في حال حذف السطر سيتم إلغاء جميع أوامر الشغل الخاصة به ",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "نعم قم بالحذف نهائياً",
+                        closeOnConfirm: false
+                    }, function () {
+
+                        var tbhal = "";
+
+                        if (typeoo == "services_invoice") {
+
+                            tbhal = 'EAAAAMqUDd2KBpA82RoYZENAeNYO3AkhbH5oqu0w2+/1U29jCgGOG1ntGtM2wnro5XBAWw=='
+                        } else if (typeoo == "items") {
+
+                            tbhal = 'EAAAAHrl+6mHeX394lU4R2zPf4n/8272nR/GAqif2ROOmHRifZHQYOuRsutm8gS0qXSy6g=='
+                        } else if (typeoo == "services") {
+
+                            tbhal = 'EAAAAP3m3wn5FDz+EK5aQTeL7BKO6WpDGlQpxSW75HYTnviUP2xI2QY3Bxw33JVBeE2Bbg=='
+                        } else if (typeoo == "ment_invoice") {
+
+                            tbhal = 'EAAAANa+1cZkJ1IdO1+RQ2x0Q7msGOFRDKCxydcIZBaFD2+sXghXy4PKaclYnfooE/iqDw=='
+                        }
+                        $.post('../../ERP/Edit3', { tbanme: tbhal, colname: 'EAAAAHlCZoIZDym9m+zIRrc3sirI+JFqIJxz7jILjPl2lO6s', rowid: id, cellvall: "1" },
+                                function (data, suc) {
+                                    ////console.log(data);
+                                    if (Number(data) > -1) {
+                                        var hid = $("#hid").val();
+                                        getbill(" ID ='" + hid + "' ", function (data) {
+                                            try {
+                                                swal("تم حذف  البند رقم " + itnum + "  " + itnam + " بنجاح");
+
+
+                                            } catch (err) {
+
+                                            }
+
+                                        });
+
+
+                                    }
+                                    else {
+
+                                        swal("لم يتم حذف البند راجع الصلاحيات")
+
+                                    }
+                                });
+
+
+                    });
+
+                }
+            });
+
+            if (xc == 0) {
+
+                swal("يجب أن تختار سطر أولا")
+            }
+        });
+        $("#add_subrow").click(function () {
+            var xc = 0;
+            $(".chkitem").each(function () {
+
+                if ($(this).is(':checked')) {
+                    xc += 0;
+                    var id = $(this).data('id');
+                    alert(id);
+                }
+            });
+            if (xc == 0) {
+                swal("يجب أن تختار سطر لحذفه أولا!")
+
+            }
+        });
+        $("#control_items").click(function () {
+            var hid = $("#hid").val();
+            if (hid != "") {
+                var url = "../../ERP/tablet?tbname=Sales_order_items&xxx=" + hid + "&colx=Header_id&hidefrm=true";
+                window.open(url, "_blank");
+
+            } else {
+                swal("يجب اختيار إذن أولا!")
+
+            }
+
+        });
+        $("#approve").click(function () {
+            var hid = $("#hid").val();
+            if (hid != "") {
+                swal({
+                    title: "هل أنت متأكد من تريد تأكيد فاتورة لأمر البيع رقم" + $("#invoice_number").val(),
+                    text: "في حال تأكيد أمر البيع  لا يمكنك حذف إذن البيع إلا بعمل مرتجع ",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "نعم قم بتأكيد أمر البيع نهائياً",
+                    closeOnConfirm: false
+                }, function () {
+                    var nosave = 0;
+
+                    var isth = 0;
+
+                    $(".moda").each(function () {
+                        try {
+
+                            if ($(this).text().toLowerCase().indexOf('th') > -1 || $(this).toLowerCase().indexOf('sd') > -1) {
+                                isth = 1;
+                            }
+                        } catch (err) {
+                            //console.log(err);
+
+                        }
+
+
+
+
+                    });
+
+                    if (isth == 1) {
+
+                        $(".specif").each(function () {
+
+                            try {
+
+                                if ($(this).val() == "" && $(this).prop('type') == 'number' && $(this).is(":visible")) {
+                                    nosave += 1;
+                                }
+                            } catch (err) {
+
+                                //console.log(err);
+                            }
+
+
+
+
+                        });
+                    }
+
+                    //console.log(nosave);
+                    if (nosave > 0) {
+
+                        swal("تنبيه هام لم تقم بإدخال عدد " + nosave + " بيان مقاس");
+                    } else {
+                        var prost = "addsalesinv '" + $('#hid').val() + "' ,'@DBHelper.UserID("")'";
+                        ////console.log(prost)
+                        loading("lo_addsalesinv");
+                        $.post("../../ERP/proced", { id: prost }, function (data, suc) {
+                            unloading("lo_addsalesinv");
+
+                            //$.post("../../publish/pytbill", { id: $('#hid').val() + "_so" }, function (data, suc) {
+
+
+                            //});
+                            if (Number(data) > 0) {
+                                swal("تم تأكيد فاتورة البيع بنجاح " + "(" + data + ")");
+                                getsales_ivoice($('#hid').val());
+
+
+                            }
+                            else {
+
+                                swal("لم يتم تأكيد  فاتورة البيع راجع الصلاحيات", data)
+
+                            }
+                        });
+
+                    }
+
+
+                });
+            } else {
+                swal("يجب اختيار إذن أولا!")
+
+            }
+
+        });
+
+
+    }
+
+
+    $("input").each(function () {
+
+        $(this).attr("autocomplete", "off");
+        $(this).prop("autocomplete", "off");
+
+    });
+
+
+    selectj({ name: "Sales_order_type_Category", orderby: "sort" }, function () {
+
+        selectj({ name: "Sales_order_type", cond: " Category='" + $("#Sales_order_type_Category").val() + "'" }, function () {
+
+
+        });
+
+        $("#Sales_order_type_Category").on('change', function () {
+
+            selectj({ name: "Sales_order_type", cond: " Category='" + $("#Sales_order_type_Category").val() + "'" }, function () {
+
+                $("#Sales_order_type").prepend("<option value='0' selected > اختار</option>");
+            });
+        });
+    });
+
+    $("#Sales_order_type").on('change', function () {
+
+
+
+        var procx = " sales_order_update_order_type_add N'" + $("#hid").val() + "',N'" + $("#Sales_order_type").val() + "',N'@DBHelper.UserID("")'";
+        loading("sales_order_update_order_typex");
+        $.post("../../ERP/proced", { id: procx }, function (data, suc) {
+            unloading("sales_order_update_order_typex");
+            if (Number(data) > 0) {
+
+
+                setTimeout(getbill(" ID ='" + $("#hid").val() + "' "), 1500);
+
+            } else {
+
+
+
+            }
+        });
+
+
+
+    });
+</script>
